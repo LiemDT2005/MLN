@@ -1,185 +1,2485 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8">
+<html lang="vi">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Chủ doanh nghiệp miền Tây</title>
+<title>Chủ doanh nghiệp miền Tây - Mô phỏng Kinh tế Chính trị Mác - Lênin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#d9eef0;--bg2:#eaf6e4;--sf:#fff;--tx:#10302f;--mu:#587270;--ac:#0e7c7b;--gd:#c98a12;--bd:#bcd6d3;--bad:#c0392b;--good:#1f8a4c;--s1:#9b6a3f;--s2:#7a4e2b;--lf:#59b85f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0c1f22;--bg2:#12261c;--sf:#173030;--tx:#e3f1ed;--mu:#93aca7;--ac:#4fc3b8;--gd:#e8b84a;--bd:#2c4a47;--bad:#ff8a80;--good:#7bd88f;--s1:#6d4a2c;--s2:#573920}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#0c1f22;--bg2:#12261c;--sf:#173030;--tx:#e3f1ed;--mu:#93aca7;--ac:#4fc3b8;--gd:#e8b84a;--bd:#2c4a47;--bad:#ff8a80;--good:#7bd88f;--s1:#6d4a2c;--s2:#573920}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:linear-gradient(var(--bg),var(--bg2));color:var(--tx);font:15px/1.5 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.w{max-width:1040px;margin:0 auto;padding:12px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
-h1{font-size:19px;margin:0}
-.track{display:flex;gap:4px}.track i{width:16px;height:8px;border-radius:4px;background:var(--bd)}.track .d{background:var(--ac)}.track .c{background:var(--gd);width:26px}
-.hud{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:8px}
-.chip{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:6px 10px}
-.chip small{color:var(--mu);display:block;font-size:12px}.chip b{font-size:18px}
-.bar{height:7px;background:var(--bd);border-radius:5px;overflow:hidden;margin-top:3px}.bar i{display:block;height:100%;background:var(--ac);transition:width .5s}
-.goal{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;font-size:13px}
-.tag{padding:2px 10px;border-radius:12px;background:var(--sf);border:1px solid var(--bd)}.tag.ok{background:var(--good);color:#fff;border-color:var(--good)}
-.hint{background:var(--sf);border:1px dashed var(--gd);border-radius:10px;padding:8px 12px;margin-bottom:10px;font-weight:500}
-.cols{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:12px;align-items:start}
-@media(max-width:760px){.cols{grid-template-columns:1fr}}
-.card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:12px}
-.card h2{font-size:15px;margin:0 0 8px}
-.farm{background:linear-gradient(var(--sf),color-mix(in srgb,var(--lf) 14%,var(--sf)))}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.pl{aspect-ratio:1;border-radius:12px;border:0;color:#fff;font:inherit;font-size:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;background:linear-gradient(var(--s1),var(--s2));box-shadow:inset 0 -5px 0 rgba(0,0,0,.2);transition:transform .12s}
-.pl:hover{transform:translateY(-2px)}.pl small{font-size:12px;opacity:.95;text-shadow:0 1px 2px rgba(0,0,0,.5)}
-.pl.gr{background:linear-gradient(#6bbf59,#3f8f46);cursor:default}.pl.gr:hover{transform:none}
-.pl.rd{background:linear-gradient(#f2c14e,#d9951b);animation:pulse 1.4s infinite}
-.pl.lk{background:repeating-linear-gradient(45deg,var(--bd),var(--bd) 8px,var(--bg) 8px,var(--bg) 16px);color:var(--mu)}.pl.lk small{text-shadow:none}
-.pl.nw .e{animation:bn .5s}.e{font-size:36px;line-height:1.1}
-@keyframes pulse{50%{box-shadow:inset 0 -5px 0 rgba(0,0,0,.2),0 0 0 5px rgba(242,193,78,.45)}}
-@keyframes bn{0%{transform:scale(.3)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
-@keyframes fl{to{transform:translate(-50%,-60px);opacity:0}}
-@keyframes fp{from{transform:perspective(700px) rotateY(90deg) scale(.7);opacity:0}}
-.fl{position:fixed;z-index:30;font-weight:700;font-size:18px;color:var(--good);text-shadow:0 1px 3px rgba(0,0,0,.4);animation:fl 1.1s forwards;pointer-events:none;transform:translateX(-50%)}.fl.bad{color:var(--bad)}
-.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-.b{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;text-align:left;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:9px 11px;margin-bottom:6px;font:inherit;cursor:pointer}
-.b small{color:var(--mu);display:block;font-size:12px}.b:disabled{opacity:.5;cursor:default}.b:not(:disabled):hover{border-color:var(--ac)}
-.b:focus-visible,.pl:focus-visible,.tb:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
-.go{background:var(--ac);color:#fff;border-color:var(--ac);font-weight:700;justify-content:center;font-size:16px}
-.half{flex:1;margin:0;justify-content:center}
-.tabs{display:flex;gap:4px;margin-bottom:10px}.tb{flex:1;padding:7px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:8px;font:inherit;cursor:pointer}.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
-.mini{border-left:5px solid var(--mu);background:var(--sf);border-radius:8px;padding:8px 10px;margin-bottom:10px;border:1px solid var(--bd);border-left-width:5px}.mini.o{border-left-color:var(--good)}.mini.c{border-left-color:var(--bad)}
-table{width:100%;border-collapse:collapse}td{padding:4px 0;border-bottom:1px solid var(--bd)}td:last-child{text-align:right;font-weight:600}
-.stk{display:flex;height:16px;border-radius:8px;overflow:hidden;margin:6px 0}.stk i{display:block}
-.lg{font-size:12px;color:var(--mu);margin-bottom:8px}.rules{font-size:14px}.rules h3{font-size:14px;margin:12px 0 4px}.rules ul{margin:0;padding-left:18px}
-.msg{color:var(--bad);min-height:20px;font-size:13px}
-.ov{position:fixed;inset:0;background:rgba(5,20,22,.72);display:flex;padding:16px;z-index:20;overflow:auto}
-.ov>.card{max-width:540px;margin:auto;animation:fp .5s}
-.evc{border-top:8px solid var(--mu)}.evc.o{border-top-color:var(--good)}.evc.c{border-top-color:var(--bad)}
-.big{font-size:64px;text-align:center;line-height:1.2}.evc h2{font-size:19px;text-align:center}
-.r{font-weight:700;padding:8px;border-radius:8px;background:var(--bg);margin:8px 0}.evc em{color:var(--mu);font-style:normal;font-size:13px;display:block;margin-bottom:10px}
-.sc{display:grid;gap:8px}.sc .b{padding:12px}
-button.chip{font:inherit;color:var(--tx);text-align:left;cursor:pointer}button.chip:hover{border-color:var(--ac)}
-.dl{font-size:12px;font-weight:700;margin-left:6px}.dl.up,.ps{color:var(--good)}.dl.dn,.ng{color:var(--bad)}
-.scene{position:relative;height:132px;border-radius:14px;overflow:hidden;margin-bottom:10px}
-.scene .pill{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.88);color:#10302f;border-radius:14px;padding:3px 12px;font-weight:600;font-size:13px;z-index:2}
-.sun{position:absolute;right:22px;top:8px;font-size:36px}.cl{position:absolute;font-size:30px;opacity:.9;animation:dr 40s linear infinite}.bt{position:absolute;bottom:10px;font-size:30px;animation:dr 22s linear infinite}
-.bld{position:absolute;left:0;right:0;bottom:38%;text-align:center;font-size:32px;letter-spacing:4px}.wk{position:absolute;left:12px;bottom:6px;font-size:22px;background:rgba(255,255,255,.75);border-radius:12px;padding:0 8px}
-@keyframes dr{from{left:-12%}to{left:105%}}
-.wf{margin-bottom:12px}.wf>b{font-size:13px}.wr{display:grid;grid-template-columns:104px 1fr 64px;gap:6px;align-items:center;font-size:12px;margin-top:3px}.wr>div{height:10px;background:var(--bd);border-radius:5px;overflow:hidden}.wr i{display:block;height:100%;background:var(--ac)}.wr i.up{background:var(--good)}.wr i.dn{background:var(--bad)}.wr em{font-style:normal;text-align:right;font-weight:600}
-.pg{width:72%;height:5px;background:rgba(0,0,0,.3);border-radius:3px;overflow:hidden;margin-top:3px}.pg i{display:block;height:100%;background:#fff}
-.fish .pl:not(.lk):not(.rd){background:linear-gradient(#6cc3e8,#2b82b3)}.fish .pl.gr{background:linear-gradient(#4aa6d6,#1f6d9c)}.fruit .pl:not(.lk):not(.rd):not(.gr){background:linear-gradient(#b08a5b,#8b6a3f)}.fruit .pl.gr{background:linear-gradient(#7ac36a,#3f8f46)}
-.rp td:first-child{font-size:13px}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-</style></head><body><div class="w">
-<div class="top"><h1>🌾 Chủ doanh nghiệp miền Tây</h1><div class="track" id="trk"></div></div><div id="scene" class="scene"></div>
-<div id="hud" class="hud"></div><div id="goal" class="goal"></div><div id="hint" class="hint"></div>
-<div class="cols"><div id="L"></div><div id="Rr"></div></div>
-</div><div id="ov"></div>
+:root {
+  --font-main: "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Mekong Palette */
+  --bg-1: #e0f2f1;
+  --bg-2: #f0fdf4;
+  --bg-3: #e8f5e9;
+  
+  --sf: #ffffff;
+  --sf-card: rgba(255, 255, 255, 0.95);
+  --sf-subtle: #f4fbf9;
+  --sf-hover: #eef8f5;
+  
+  --tx: #0c2d2a;
+  --tx-sec: #325551;
+  --mu: #577e79;
+  
+  --ac: #0d9488;
+  --ac-hover: #0f766e;
+  --ac-glow: rgba(13, 148, 136, 0.28);
+  --ac-light: #ccfbf1;
+  
+  --gd: #d97706;
+  --gd-hover: #b45309;
+  --gd-light: #fef3c7;
+  --gd-glow: rgba(217, 119, 6, 0.3);
+  
+  --bd: #cbdad7;
+  --bd-light: #e5efec;
+  
+  --bad: #e11d48;
+  --bad-bg: #ffe4e6;
+  --bad-border: #fca5a5;
+  
+  --good: #059669;
+  --good-bg: #d1fae5;
+  --good-border: #6ee7b7;
+  
+  --blue: #2563eb;
+  --blue-bg: #dbeafe;
+  
+  /* Alluvial Soil */
+  --s1: #8d5b32;
+  --s2: #643c1c;
+  --soil-border: #a46d3e;
+  --soil-shine: #b87d4a;
+  
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  
+  --shadow-sm: 0 1px 3px rgba(13, 76, 70, 0.06);
+  --shadow: 0 4px 18px -2px rgba(13, 76, 70, 0.09), 0 2px 6px -1px rgba(13, 76, 70, 0.04);
+  --shadow-lg: 0 18px 40px -6px rgba(13, 76, 70, 0.18), 0 6px 16px -2px rgba(13, 76, 70, 0.08);
+}
+
+@media(prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg-1: #06181b;
+    --bg-2: #0a2024;
+    --bg-3: #071714;
+    
+    --sf: #0f282c;
+    --sf-card: rgba(15, 40, 44, 0.95);
+    --sf-subtle: #143438;
+    --sf-hover: #194044;
+    
+    --tx: #e7f7f5;
+    --tx-sec: #b4d8d3;
+    --mu: #7da5a0;
+    
+    --ac: #2dd4bf;
+    --ac-hover: #14b8a6;
+    --ac-glow: rgba(45, 212, 191, 0.35);
+    --ac-light: rgba(45, 212, 191, 0.15);
+    
+    --gd: #fbbf24;
+    --gd-hover: #f59e0b;
+    --gd-light: rgba(251, 191, 36, 0.16);
+    --gd-glow: rgba(251, 191, 36, 0.35);
+    
+    --bd: #1d4246;
+    --bd-light: #265358;
+    
+    --bad: #fb7185;
+    --bad-bg: rgba(251, 113, 133, 0.18);
+    --bad-border: rgba(251, 113, 133, 0.35);
+    
+    --good: #34d399;
+    --good-bg: rgba(52, 211, 153, 0.18);
+    --good-border: rgba(52, 211, 153, 0.35);
+    
+    --blue: #60a5fa;
+    --blue-bg: rgba(96, 165, 250, 0.18);
+    
+    --s1: #633e20;
+    --s2: #462911;
+    --soil-border: #7b4f2a;
+    --soil-shine: #8c5b33;
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
+    --shadow-lg: 0 18px 45px rgba(0, 0, 0, 0.75);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-1: #06181b;
+  --bg-2: #0a2024;
+  --bg-3: #071714;
+  
+  --sf: #0f282c;
+  --sf-card: rgba(15, 40, 44, 0.95);
+  --sf-subtle: #143438;
+  --sf-hover: #194044;
+  
+  --tx: #e7f7f5;
+  --tx-sec: #b4d8d3;
+  --mu: #7da5a0;
+  
+  --ac: #2dd4bf;
+  --ac-hover: #14b8a6;
+  --ac-glow: rgba(45, 212, 191, 0.35);
+  --ac-light: rgba(45, 212, 191, 0.15);
+  
+  --gd: #fbbf24;
+  --gd-hover: #f59e0b;
+  --gd-light: rgba(251, 191, 36, 0.16);
+  --gd-glow: rgba(251, 191, 36, 0.35);
+  
+  --bd: #1d4246;
+  --bd-light: #265358;
+  
+  --bad: #fb7185;
+  --bad-bg: rgba(251, 113, 133, 0.18);
+  --bad-border: rgba(251, 113, 133, 0.35);
+  
+  --good: #34d399;
+  --good-bg: rgba(52, 211, 153, 0.18);
+  --good-border: rgba(52, 211, 153, 0.35);
+  
+  --blue: #60a5fa;
+  --blue-bg: rgba(96, 165, 250, 0.18);
+  
+  --s1: #633e20;
+  --s2: #462911;
+  --soil-border: #7b4f2a;
+  --soil-shine: #8c5b33;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 18px 45px rgba(0, 0, 0, 0.75);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 10%, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+  background-attachment: fixed;
+  color: var(--tx);
+  font: 14.5px/1.55 var(--font-main);
+  padding: 12px 10px 40px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.w {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* APP HEADER */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  padding: 2px 2px 6px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sf-card);
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  animation: pulse-leaf 3s ease-in-out infinite;
+}
+
+@keyframes pulse-leaf {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.05) rotate(4deg); }
+}
+
+.brand-title h1 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--tx);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-title p {
+  font-size: 12.5px;
+  color: var(--mu);
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: var(--sf-card);
+  border: 1px solid var(--bd);
+  color: var(--tx);
+  border-radius: 10px;
+  padding: 7px 13px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.16s ease;
+}
+
+.icon-btn:hover {
+  border-color: var(--ac);
+  background: var(--ac-light);
+  transform: translateY(-1px);
+}
+
+/* TIMELINE TRACKER */
+.timeline-wrap {
+  background: var(--sf-card);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--mu);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.year-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.year-tag {
+  padding: 2px 10px;
+  border-radius: 12px;
+  background: var(--bd-light);
+  color: var(--tx-sec);
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.year-tag.active {
+  background: var(--ac);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 6px var(--ac-glow);
+}
+
+.track-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 6px;
+}
+
+.track-node {
+  height: 32px;
+  border-radius: 8px;
+  background: var(--bd-light);
+  border: 1px solid var(--bd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--mu);
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.track-node.done {
+  background: var(--ac);
+  border-color: var(--ac);
+  color: #fff;
+}
+
+.track-node.active {
+  background: linear-gradient(135deg, var(--gd), #f59e0b);
+  border-color: var(--gd);
+  color: #fff;
+  box-shadow: 0 0 0 3px var(--gd-light), 0 2px 10px var(--gd-glow);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(217, 119, 6, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
+}
+
+/* ========================================================
+   LIVING ANIMATED SCENIC DIORAMA OF THE MEKONG DELTA
+   ======================================================== */
+.scene {
+  position: relative;
+  height: 195px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 1px solid var(--bd);
+  box-shadow: var(--shadow);
+  transition: background 0.8s ease;
+}
+
+/* Sector & Time pill badge */
+.scene .pill {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: #0c2d2a;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-weight: 700;
+  font-size: 12.5px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Rainbow Arc */
+.rainbow {
+  position: absolute;
+  top: -35px;
+  left: 18%;
+  width: 380px;
+  height: 180px;
+  border-radius: 190px 190px 0 0;
+  border: 4px solid transparent;
+  border-top-color: rgba(244, 63, 94, 0.3);
+  border-left-color: rgba(245, 158, 11, 0.25);
+  border-right-color: rgba(16, 185, 129, 0.25);
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.75;
+}
+
+/* Rotating Sun with Lens Rays */
+.sun-wrap {
+  position: absolute;
+  right: 24px;
+  top: 8px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sun-rays {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.45) 0%, rgba(255, 180, 0, 0.15) 55%, transparent 75%);
+  animation: rotate-rays 14s linear infinite;
+}
+.sun-core {
+  font-size: 42px;
+  filter: drop-shadow(0 2px 12px rgba(255, 190, 40, 0.65));
+  animation: float-sun 4s ease-in-out infinite alternate;
+}
+@keyframes rotate-rays {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes float-sun {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-5px) scale(1.05); }
+}
+
+/* Clouds drifting at 2 depth speeds */
+.cl {
+  position: absolute;
+  font-size: 32px;
+  opacity: 0.9;
+  z-index: 2;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+  animation: drift 42s linear infinite;
+  pointer-events: none;
+}
+.cl.cl-fast {
+  font-size: 24px;
+  opacity: 0.8;
+  animation: drift 28s linear infinite;
+  top: 38px;
+}
+@keyframes drift {
+  from { left: -15%; }
+  to { left: 105%; }
+}
+
+/* Storks flying across sky */
+.storks {
+  position: absolute;
+  top: 14px;
+  left: -90px;
+  z-index: 3;
+  display: flex;
+  gap: 12px;
+  animation: fly-across 25s linear infinite;
+  pointer-events: none;
+}
+.stork {
+  width: 22px;
+  height: 14px;
+  fill: #fff;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+  animation: flap 0.65s ease-in-out infinite alternate;
+}
+@keyframes fly-across {
+  0% { transform: translate(-80px, 14px); }
+  50% { transform: translate(55vw, -6px); }
+  100% { transform: translate(110vw, 10px); }
+}
+@keyframes flap {
+  0% { transform: scaleY(0.7) rotate(-4deg); }
+  100% { transform: scaleY(1.3) rotate(4deg); }
+}
+
+/* Village Flute Kite (Cánh diều sáo) */
+.kite-wrap {
+  position: absolute;
+  top: 22px;
+  left: 32%;
+  z-index: 3;
+  pointer-events: none;
+  animation: kite-bob 6s ease-in-out infinite alternate;
+}
+.kite-body {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #ef4444, #f59e0b);
+  transform: rotate(45deg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  border-radius: 2px;
+}
+.kite-tail {
+  width: 1.5px;
+  height: 18px;
+  background: rgba(255,255,255,0.7);
+  margin: -2px auto 0;
+  animation: tail-wiggle 1.2s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+@keyframes kite-bob {
+  0% { transform: translate(0, 0) rotate(-6deg); }
+  50% { transform: translate(24px, -12px) rotate(6deg); }
+  100% { transform: translate(-14px, 8px) rotate(-10deg); }
+}
+@keyframes tail-wiggle {
+  from { transform: rotate(-15deg); }
+  to { transform: rotate(15deg); }
+}
+
+/* Distant Wind Turbine (Điện gió Bạc Liêu) */
+.wind-turbine {
+  position: absolute;
+  right: 155px;
+  bottom: 50px;
+  z-index: 3;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.turbine-pole {
+  width: 2.5px;
+  height: 42px;
+  background: #94a3b8;
+  margin: 0 auto;
+}
+.turbine-rotor {
+  position: absolute;
+  top: -12px;
+  left: -11px;
+  width: 24px;
+  height: 24px;
+  animation: spin-turbine 3.2s linear infinite;
+}
+.turbine-blade {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 2px;
+  height: 12px;
+  background: #cbd5e1;
+  transform-origin: bottom center;
+  border-radius: 2px;
+}
+.turbine-blade.b2 { transform: rotate(120deg); }
+.turbine-blade.b3 { transform: rotate(240deg); }
+@keyframes spin-turbine {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* River Bank terrain */
+.river-bank {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 46px;
+  height: 52px;
+  background: linear-gradient(180deg, #3aa84f 0%, #1e7530 100%);
+  border-top: 3px solid #6dd97e;
+  z-index: 4;
+}
+
+/* Coconut palms swaying */
+.palms {
+  position: absolute;
+  left: 10px;
+  bottom: 44px;
+  font-size: 32px;
+  z-index: 5;
+  animation: sway 3.2s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+@keyframes sway {
+  from { transform: rotate(-3deg); }
+  to { transform: rotate(3deg); }
+}
+
+/* Traditional Thatched Cottage with Smoke */
+.cottage-wrap {
+  position: absolute;
+  left: 115px;
+  bottom: 48px;
+  font-size: 30px;
+  z-index: 5;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+.smoke-puff {
+  position: absolute;
+  top: -14px;
+  right: 2px;
+  font-size: 13px;
+  opacity: 0.75;
+  animation: smoke-float 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes smoke-float {
+  0% { transform: translateY(0) scale(0.7); opacity: 0.8; }
+  100% { transform: translateY(-24px) translateX(10px) scale(1.6); opacity: 0; }
+}
+
+/* Water Buffalo (Chú trâu nước) */
+.buffalo {
+  position: absolute;
+  left: 185px;
+  bottom: 46px;
+  font-size: 24px;
+  z-index: 5;
+  animation: buffalo-chew 4s ease-in-out infinite alternate;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+@keyframes buffalo-chew {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg) translateY(-1px); }
+}
+
+/* Dragonflies & Yellow Butterflies */
+.critters {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+.butterfly {
+  position: absolute;
+  left: 235px;
+  bottom: 60px;
+  font-size: 16px;
+  animation: flutter 7s ease-in-out infinite alternate;
+}
+.dragonfly {
+  position: absolute;
+  right: 200px;
+  bottom: 52px;
+  font-size: 16px;
+  animation: dart 6s ease-in-out infinite alternate;
+}
+@keyframes flutter {
+  0% { transform: translate(0, 0) scale(0.9) rotate(0deg); }
+  25% { transform: translate(20px, -18px) scale(1) rotate(15deg); }
+  50% { transform: translate(45px, -6px) scale(0.9) rotate(-10deg); }
+  75% { transform: translate(25px, -24px) scale(1.05) rotate(20deg); }
+  100% { transform: translate(0, 0) scale(0.9) rotate(0deg); }
+}
+@keyframes dart {
+  0% { transform: translate(0, 0); }
+  30% { transform: translate(-38px, -20px); }
+  70% { transform: translate(-65px, -8px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Farm Assets & Upgrades along bank */
+.bld {
+  position: absolute;
+  left: 260px;
+  right: 20px;
+  bottom: 50px;
+  font-size: 28px;
+  letter-spacing: 6px;
+  z-index: 5;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.facility-item {
+  display: inline-block;
+  animation: facility-pop 0.5s ease;
+}
+@keyframes facility-pop {
+  0% { transform: scale(0.4); opacity: 0; }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Farm workers with conical hats */
+.wk {
+  position: absolute;
+  left: 14px;
+  bottom: 8px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  color: #0c2d2a;
+  border-radius: 14px;
+  padding: 3px 12px;
+  z-index: 8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Flowing Mekong River Water */
+.river-water {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52px;
+  background: linear-gradient(180deg, #2fa3b3 0%, #176571 100%);
+  overflow: hidden;
+  z-index: 6;
+}
+.water-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 9px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,0.3) 0px, rgba(255,255,255,0.3) 24px, transparent 24px, transparent 48px);
+  animation: wave-slide 3.5s linear infinite;
+}
+@keyframes wave-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-48px); }
+}
+
+/* Floating Purple Water Hyacinths (Hoa lục bình trôi) */
+.hyacinths {
+  position: absolute;
+  bottom: 8px;
+  z-index: 7;
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+  animation: hyacinth-drift 26s linear infinite;
+  pointer-events: none;
+}
+@keyframes hyacinth-drift {
+  from { left: 105%; }
+  to { left: -20%; }
+}
+
+/* Swimming Flock of Ducks (Đàn vịt bơi) */
+.duck-flock {
+  position: absolute;
+  bottom: 14px;
+  left: 36%;
+  z-index: 7;
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+  animation: duck-swim 16s linear infinite;
+}
+@keyframes duck-swim {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(45px) translateY(-2px); }
+  100% { transform: translateX(0); }
+}
+
+/* Traditional Sampan Boat sailing across */
+.bt {
+  position: absolute;
+  bottom: 10px;
+  font-size: 30px;
+  z-index: 7;
+  animation: drift-boat 22s linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+}
+@keyframes drift-boat {
+  0% { left: -12%; transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-2px) rotate(1.5deg); }
+  50% { transform: translateY(1.5px) rotate(-1.5deg); }
+  75% { transform: translateY(-2px) rotate(1.5deg); }
+  100% { left: 105%; transform: translateY(0) rotate(0deg); }
+}
+
+/* Jumping Fish (Fish sector) */
+.jumping-fish {
+  position: absolute;
+  bottom: 14px;
+  right: 18%;
+  font-size: 24px;
+  z-index: 7;
+  animation: jump-fish 4.8s ease-in-out infinite;
+}
+@keyframes jump-fish {
+  0%, 75%, 100% { transform: translateY(45px) scale(0.6) rotate(45deg); opacity: 0; }
+  85% { transform: translateY(-20px) scale(1) rotate(-15deg); opacity: 1; }
+  92% { transform: translateY(4px) scale(0.9) rotate(45deg); opacity: 0.8; }
+}
+
+/* Rain animation & Lightning Flash during Challenge */
+.rain-layer {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(105deg, rgba(255,255,255,0.35) 0, rgba(255,255,255,0.35) 2px, transparent 2px, transparent 18px);
+  animation: rain-fall 0.35s linear infinite, thunder-flash 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 9;
+}
+@keyframes rain-fall {
+  from { background-position: 0 0; }
+  to { background-position: -24px 88px; }
+}
+@keyframes thunder-flash {
+  0%, 94%, 98%, 100% { background-color: transparent; }
+  95% { background-color: rgba(255, 255, 255, 0.35); }
+  97% { background-color: rgba(255, 255, 255, 0.2); }
+}
+
+/* HUD METRIC CARDS */
+.hud {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+@media(max-width: 880px) {
+  .hud { grid-template-columns: repeat(3, 1fr); }
+}
+@media(max-width: 540px) {
+  .hud { grid-template-columns: repeat(2, 1fr); }
+}
+
+.chip {
+  background: var(--sf-card);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius);
+  padding: 10px 13px;
+  text-align: left;
+  font: inherit;
+  color: var(--tx);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.chip:hover {
+  border-color: var(--ac);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.chip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.chip-title {
+  color: var(--mu);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.chip-info-btn {
+  font-size: 11px;
+  color: var(--mu);
+  opacity: 0.75;
+}
+
+.chip-val-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip b {
+  font-size: 17.5px;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+.dl {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.dl.up, .ps {
+  color: var(--good);
+  background: var(--good-bg);
+}
+
+.dl.dn, .ng {
+  color: var(--bad);
+  background: var(--bad-bg);
+}
+
+.bar {
+  height: 6px;
+  background: var(--bd-light);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--ac);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* GOALS & HINT BARS */
+.goal-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.goal-tag {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--sf-card);
+  border: 1px solid var(--bd);
+  font-size: 12.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.goal-tag.ok {
+  background: var(--good-bg);
+  color: var(--good);
+  border-color: var(--good-border);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.2);
+}
+
+.goal-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mu);
+}
+
+.goal-tag.ok .goal-status-dot {
+  background: var(--good);
+  box-shadow: 0 0 0 3px var(--good-border);
+}
+
+.hint-box {
+  background: var(--sf-card);
+  border: 1px solid var(--gd);
+  background: linear-gradient(90deg, var(--sf-card) 0%, var(--gd-light) 100%);
+  border-radius: var(--radius);
+  padding: 10px 15px;
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hint-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  animation: pulse-hint 2s infinite alternate;
+}
+@keyframes pulse-hint {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+/* 2-COLUMN MAIN LAYOUT */
+.cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+@media(max-width: 820px) {
+  .cols { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--sf-card);
+  border: 1px solid var(--bd);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.card h2 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* FARM PLOTS */
+.farm {
+  background: linear-gradient(170deg, var(--sf-card) 0%, var(--sf-subtle) 100%);
+}
+
+.farm-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.farm-cost-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.cost-pill {
+  font-size: 11.5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--bd-light);
+  border: 1px solid var(--bd);
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.cost-pill.total {
+  background: var(--ac-light);
+  color: var(--ac);
+  border-color: var(--ac);
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.pl {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  border: 0;
+  color: #fff;
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: linear-gradient(145deg, var(--s1), var(--s2));
+  border: 2px solid var(--soil-border);
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.35), inset 0 2px 4px var(--soil-shine), 0 4px 10px rgba(0, 0, 0, 0.14);
+  transition: all 0.16s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 4px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pl:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.35), 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.pl:active {
+  transform: translateY(1px);
+}
+
+.pl .e {
+  font-size: 38px;
+  line-height: 1.1;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease;
+}
+
+.pl:hover .e {
+  transform: scale(1.1);
+}
+
+.pl small {
+  font-size: 11.5px;
+  font-weight: 600;
+  opacity: 0.96;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+/* Plot states */
+.pl.gr {
+  background: linear-gradient(145deg, #48bb78, #2f855a);
+  border-color: #68d391;
+  cursor: default;
+}
+.pl.gr:hover { transform: none; box-shadow: inset 0 -5px 0 rgba(0,0,0,.35); }
+.pl.gr .e { animation: plant-breathe 2.5s ease-in-out infinite alternate; }
+
+@keyframes plant-breathe {
+  from { transform: scale(0.95); }
+  to { transform: scale(1.05); }
+}
+
+.pl.rd {
+  background: linear-gradient(145deg, #fbbf24, #d97706);
+  border-color: #fef08a;
+  animation: pulse-glow 1.5s infinite;
+}
+
+.pl.rd .e {
+  animation: harvest-bounce 1s cubic-bezier(0.28, 0.84, 0.42, 1) infinite alternate;
+}
+
+@keyframes harvest-bounce {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-5px) scale(1.12); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: inset 0 -5px 0 rgba(0,0,0,.35), 0 0 0 0 rgba(245, 158, 11, 0.8); }
+  70% { box-shadow: inset 0 -5px 0 rgba(0,0,0,.35), 0 0 0 10px rgba(245, 158, 11, 0); }
+  100% { box-shadow: inset 0 -5px 0 rgba(0,0,0,.35), 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.pl.lk {
+  background: repeating-linear-gradient(45deg, var(--bd), var(--bd) 8px, var(--sf-subtle) 8px, var(--sf-subtle) 16px);
+  border: 1px dashed var(--bd);
+  color: var(--mu);
+  box-shadow: none;
+}
+.pl.lk small { text-shadow: none; color: var(--tx-sec); }
+.pl.lk:hover { border-color: var(--ac); }
+
+.pl.nw .e { animation: bounce-pop 0.5s ease; }
+
+@keyframes bounce-pop {
+  0% { transform: scale(0.3); }
+  60% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Sectors specific plots */
+.fish .pl:not(.lk):not(.rd) { background: linear-gradient(145deg, #38bdf8, #0284c7); border-color: #7dd3fc; }
+.fish .pl.gr { background: linear-gradient(145deg, #0284c7, #075985); border-color: #38bdf8; }
+
+.fruit .pl:not(.lk):not(.rd):not(.gr) { background: linear-gradient(145deg, #a16207, #78350f); border-color: #ca8a04; }
+.fruit .pl.gr { background: linear-gradient(145deg, #84cc16, #4d7c0f); border-color: #a3e635; }
+
+.pg {
+  width: 78%;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.pg i {
+  display: block;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* ACTION BUTTONS */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  background: var(--sf-card);
+  color: var(--tx);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 11px 15px;
+  margin-bottom: 8px;
+  font: inherit;
+  font-size: 13.5px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.16s ease;
+}
+
+.b small {
+  color: var(--mu);
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.b:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: grayscale(0.6);
+}
+
+.b:not(:disabled):hover {
+  border-color: var(--ac);
+  background: var(--sf-hover);
+  transform: translateY(-1px);
+}
+
+.b:focus-visible, .pl:focus-visible, .tb:focus-visible {
+  outline: 3px solid var(--ac);
+  outline-offset: 2px;
+}
+
+.half {
+  flex: 1;
+  margin: 0;
+  justify-content: center;
+  font-weight: 600;
+  padding: 11px;
+}
+
+.go {
+  background: linear-gradient(145deg, var(--ac), var(--ac-hover));
+  color: #fff;
+  border-color: var(--ac);
+  font-weight: 700;
+  font-size: 15px;
+  justify-content: center;
+  padding: 13px;
+  box-shadow: 0 4px 14px var(--ac-glow);
+}
+
+.go:not(:disabled):hover {
+  background: linear-gradient(145deg, var(--ac-hover), #0f5852);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--ac-glow);
+}
+
+.msg {
+  color: var(--bad);
+  min-height: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 6px;
+  padding: 0 2px;
+}
+
+/* FLOATING POPUP ANIMATION */
+.fl {
+  position: fixed;
+  z-index: 100;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  color: var(--good);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--good-border);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  animation: fl-up 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.fl.bad {
+  color: var(--bad);
+  border-color: var(--bad-border);
+}
+
+@keyframes fl-up {
+  0% { opacity: 0; transform: translate(-50%, 12px) scale(0.75); }
+  20% { opacity: 1; transform: translate(-50%, 0) scale(1.1); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -64px) scale(0.9); }
+}
+
+/* RIGHT TABS */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  background: var(--bd-light);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.tb {
+  flex: 1;
+  padding: 9px 6px;
+  border: 0;
+  background: transparent;
+  color: var(--tx-sec);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  text-align: center;
+}
+
+.tb:hover {
+  color: var(--tx);
+}
+
+.tb.on {
+  background: var(--sf);
+  color: var(--ac);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+/* MINI EVENT PREVIEW */
+.mini {
+  border-left: 5px solid var(--mu);
+  background: var(--sf-card);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--bd);
+  border-left-width: 5px;
+  box-shadow: var(--shadow-sm);
+  font-size: 13.5px;
+}
+
+.mini.o {
+  border-left-color: var(--good);
+  background: linear-gradient(90deg, var(--good-bg) 0%, var(--sf-card) 60%);
+}
+
+.mini.c {
+  border-left-color: var(--bad);
+  background: linear-gradient(90deg, var(--bad-bg) 0%, var(--sf-card) 60%);
+}
+
+/* WATERFALL CHARTS & TABLES */
+.wf {
+  margin-bottom: 14px;
+  background: var(--sf-subtle);
+  border: 1px solid var(--bd-light);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+.wf > b {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 6px;
+  color: var(--tx);
+}
+
+.wr {
+  display: grid;
+  grid-template-columns: 110px 1fr 65px;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.wr > div {
+  height: 9px;
+  background: var(--bd-light);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.wr i {
+  display: block;
+  height: 100%;
+  background: var(--ac);
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+.wr i.up { background: var(--good); }
+.wr i.dn { background: var(--bad); }
+
+.wr em {
+  font-style: normal;
+  text-align: right;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 7px 4px;
+  border-bottom: 1px solid var(--bd-light);
+  font-size: 13px;
+}
+
+td:last-child {
+  text-align: right;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.stk {
+  display: flex;
+  height: 18px;
+  border-radius: 9px;
+  overflow: hidden;
+  margin: 10px 0 6px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.stk i {
+  display: block;
+  transition: width 0.4s ease;
+}
+
+.lg {
+  font-size: 12px;
+  color: var(--mu);
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+/* MARXIAN CIRCUIT ANIMATION */
+.marx-circuit {
+  background: var(--sf-subtle);
+  border: 1px solid var(--bd-light);
+  border-radius: var(--radius);
+  padding: 12px;
+  margin: 10px 0 14px;
+}
+
+.circuit-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.circuit-node {
+  flex: 1;
+  background: var(--sf);
+  border: 1px solid var(--bd);
+  border-radius: 8px;
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.circuit-node b {
+  display: block;
+  font-size: 14px;
+  color: var(--ac);
+  margin-bottom: 2px;
+}
+
+.circuit-arrow {
+  color: var(--mu);
+  font-weight: bold;
+  font-size: 14px;
+  animation: arrow-slide 1.5s infinite;
+}
+@keyframes arrow-slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+.rules {
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.rules h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ac);
+  margin: 14px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rules ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.rules li {
+  margin-bottom: 4px;
+}
+
+/* MODAL OVERLAY */
+.ov {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 20, 22, 0.78);
+  backdrop-filter: blur(8px);
+  display: flex;
+  padding: 16px;
+  z-index: 1000;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.ov > .card {
+  max-width: 560px;
+  width: 100%;
+  margin: auto;
+  background: var(--sf);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-lg);
+  animation: card-appear 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes card-appear {
+  from { opacity: 0; transform: perspective(800px) scale(0.9) translateY(24px); }
+  to { opacity: 1; transform: perspective(800px) scale(1) translateY(0); }
+}
+
+.evc {
+  border-top: 10px solid var(--mu);
+}
+
+.evc.o { border-top-color: var(--good); }
+.evc.c { border-top-color: var(--bad); }
+
+.big {
+  font-size: 64px;
+  text-align: center;
+  line-height: 1.1;
+  margin: 6px 0 10px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+  animation: bounce-card-hero 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes bounce-card-hero {
+  0% { transform: scale(0.4) translateY(-20px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.evc h2 {
+  font-size: 19px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.r {
+  font-weight: 700;
+  padding: 11px 15px;
+  border-radius: 12px;
+  background: var(--sf-subtle);
+  border: 1px solid var(--bd);
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.evc em {
+  color: var(--mu);
+  font-style: normal;
+  font-size: 12.5px;
+  display: block;
+  background: var(--bg-1);
+  border-left: 4px solid var(--ac);
+  padding: 10px 14px;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+
+.sc {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.sc .b {
+  padding: 15px;
+  border-radius: 14px;
+}
+
+/* ACCESSIBILITY */
+@media(prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="w">
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon">🌾</div>
+      <div class="brand-title">
+        <h1>Chủ doanh nghiệp miền Tây</h1>
+        <p>Mô phỏng Kinh tế Chính trị Mác - Lênin · ĐBSCL</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <button class="icon-btn" onclick="toggleSound()" id="soundBtn" title="Bật / Tắt âm thanh">🔊 Âm thanh</button>
+      <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Chuyển chế độ Sáng / Tối">🌓 Giao diện</button>
+      <button class="icon-btn" onclick="tab('rl')" title="Xem luật chơi">📖 Luật chơi</button>
+    </div>
+  </header>
+
+  <div class="timeline-wrap">
+    <div class="timeline-header">
+      <span>Tiến trình 12 Quý (3 Năm)</span>
+      <div class="year-tags" id="yearTags">
+        <span class="year-tag" id="yt1">Năm 1</span>
+        <span class="year-tag" id="yt2">Năm 2</span>
+        <span class="year-tag" id="yt3">Năm 3</span>
+      </div>
+    </div>
+    <div class="track-row" id="trk"></div>
+  </div>
+
+  <div id="scene" class="scene"></div>
+  <div id="hud" class="hud"></div>
+  <div id="goal" class="goal-bar"></div>
+  <div id="hint" class="hint-box"></div>
+
+  <div class="cols">
+    <div id="L"></div>
+    <div id="Rr"></div>
+  </div>
+</div>
+
+<div id="ov"></div>
+
 <script>
-const $=i=>document.getElementById(i);
-const SEC={
-rice:{n:"Lúa gạo (Đồng Tháp)",e:"🌾",c:40,v:20,g:2,r:95,salt:.4,dis:.1,d:"Dễ chơi: vốn thấp, lãi mỏng, chu kỳ 2 quý. Dễ bị xâm nhập mặn."},
-fish:{n:"Thủy sản (cá tra, tôm)",e:"🐟",c:80,v:40,g:3,r:215,salt:.2,dis:.4,d:"Lãi cao nhưng vốn lớn, dễ dịch bệnh, chịu rào cản kỹ thuật nặng."},
-fruit:{n:"Trái cây (xoài, sầu riêng)",e:"🥭",c:60,v:30,g:3,r:175,salt:.4,dis:.1,d:"Giá trị xuất khẩu cao nếu đạt chuẩn, nhạy với xâm nhập mặn."}};
-const INV={
-tech:{i:"⚙️",n:"Máy móc, công nghệ",p:[150,250,350],d:"+14% năng suất, −15% chi phí lao động, nhưng c tăng 10%"},
-skill:{i:"🎓",n:"Tăng lương và đào tạo",p:[60,90,120],d:"Tinh thần +0/+3/+6 mỗi quý, +6% năng suất, v tăng 10%"},
-cert:{i:"📋",n:"Chứng nhận quốc tế (GlobalGAP, ASC)",p:[180],d:"Hưởng trọn ưu đãi EVFTA, RCEP; tránh rào cản kỹ thuật"},
-coop:{i:"🤝",n:"Liên kết hợp tác xã",p:[120],d:"Giảm một nửa rủi ro thiên tai, giá bán +5%, đỡ bị ép giá"}};
-const kill=(s,p)=>{let n=0;s.plots.forEach(o=>{if(o.s==1&&Math.random()<p){o.s=0;n++}});return n};
-const EV=[
-["o","🚢","EVFTA: thuế vào EU giảm","Thuế nhập khẩu vào châu Âu giảm theo lộ trình.","Hội nhập mở rộng thị trường, giúp thực hiện giá trị (H'–T'), nhưng chỉ doanh nghiệp đủ năng lực mới hưởng lợi.",s=>s.cert?(s.pm*=1.25,"Đã có chứng nhận: giá bán ×1,25."):(s.pm*=1.05,"Chưa có chứng nhận: chỉ hưởng giá ×1,05.")],
-["o","🌏","RCEP: thêm thị trường châu Á","Đơn hàng từ Nhật Bản, Hàn Quốc, Trung Quốc tăng.","Thị trường rộng hơn mở đường cho tái sản xuất mở rộng, kèm đòi hỏi về tiêu chuẩn.",s=>s.cert?(s.cash+=80,s.pm*=1.1,"Đạt chuẩn: +80 triệu tiền cọc, giá ×1,1."):"Chưa đạt chuẩn: bỏ lỡ đơn hàng."],
-["o","🏦","Quỹ hỗ trợ khởi nghiệp","Địa phương hỗ trợ vốn cho doanh nghiệp nhỏ và vừa.","Vốn là điểm xuất phát của tuần hoàn T–H…SX…H'–T'; tích lũy cần nguồn vốn.",s=>(s.cash+=80,"+80 triệu tiền mặt.")],
-["o","🤝","Hợp tác xã bao tiêu sản phẩm","Một hợp tác xã lớn tìm đối tác ổn định.","Liên kết giúp tích tụ và tập trung tư bản, tăng sức cạnh tranh.",s=>s.coop?(s.pm*=1.15,"Đã vào hợp tác xã: giá ×1,15."):(s.pm*=1.04,"Chưa vào hợp tác xã: giá ×1,04.")],
-["o","💻","Hỗ trợ chuyển đổi số","Nhà nước hỗ trợ 50% chi phí đổi mới.","Đổi mới kỹ thuật nâng năng suất lao động, tạo giá trị thặng dư siêu ngạch.",s=>(s.disc=.5,"Khoản đầu tư kế tiếp giảm 50%.")],
-["c","🌊","Xâm nhập mặn","Hạn mặn kéo dài ở vùng ven biển.","Sản xuất nông nghiệp gắn với tự nhiên, tư bản bị đình trệ trong khâu sản xuất.",s=>{const n=kill(s,SEC[s.sec].salt*(s.coop?.5:1));return n?"Mất "+n+" ô đang canh tác (mất cả c và v đã ứng).":"May mắn, không ô nào bị hại."}],
-["c","🦠","Dịch bệnh lan nhanh","Dịch bệnh bùng phát trong vùng sản xuất.","Rủi ro làm đứt vòng tuần hoàn: tư bản ứng ra không quay về thành tiền.",s=>{const n=kill(s,SEC[s.sec].dis*(s.coop?.5:1));return n?"Mất "+n+" ô đang canh tác.":"May mắn, không ô nào bị hại."}],
-["c","📋","Rào cản kỹ thuật, truy xuất nguồn gốc","Thị trường nhập khẩu siết tiêu chuẩn xanh.","Cạnh tranh quốc tế buộc phải đổi mới; doanh nghiệp không đạt chuẩn bị loại khỏi thị trường.",s=>s.cert?"Đã đạt chuẩn: không bị ảnh hưởng.":(s.pm*=.7,"Chưa đạt chuẩn: giá bán ×0,7.")],
-["c","📦","Hàng nhập khẩu giá rẻ tràn vào","Hàng ngoại cạnh tranh trực tiếp trên thị trường nội địa.","Quy luật cạnh tranh: chi phí cao hơn mức hao phí xã hội cần thiết thì thua.",s=>s.tech>=2?(s.pm*=.95,"Máy móc tốt, chi phí thấp: giá ×0,95."):(s.pm*=s.coop?.92:.85,"Giá bán ×"+(s.coop?"0,92":"0,85")+".")],
-["c","⛽","Giá vật tư tăng mạnh","Phân bón, thức ăn, xăng dầu đồng loạt tăng.","Tư bản bất biến (c) tăng làm thu hẹp giá trị thặng dư.",s=>(s.cm=1.3,"Chi phí c khi gieo trồng quý này ×1,3.")],
-["c","📉","Giá nông sản rớt","Được mùa mất giá, thương lái ép giá.","Quy luật giá trị và cung cầu: đơn lẻ thì yếu thế khi thương lượng.",s=>(s.pm*=s.coop?.88:.75,"Giá bán ×"+(s.coop?"0,88":"0,75")+".")],
-["c","🌀","Bão lũ bất thường","Mưa bão gây ngập nhiều khu vực.","Thiên tai phá hủy tư liệu sản xuất đã ứng ra.",s=>{const n=kill(s,.25);s.cash-=30;return "Mất "+n+" ô và 30 triệu sửa chữa."}],
-["n","☀️","Một quý bình lặng","Không có biến động lớn.","Tái sản xuất diễn ra bình thường, hãy tập trung tích lũy.",s=>"Không thay đổi."]];
-const RULES=`<div class="rules"><h3>Một quý gồm 3 bước</h3><ul><li><b>Gieo:</b> bấm ô trống, ứng c + v (T–H).</li><li><b>Sản xuất:</b> cây lớn sau 2–3 quý (H…SX…H').</li><li><b>Thu hoạch:</b> bấm ô chín để thu doanh thu (H'–T'). Chín quá 1 quý bị hao hụt 25% mỗi quý.</li></ul>
-<h3>Công thức</h3><ul><li>c = c₀ × (1 + 10% × cấp máy) × hệ số vật tư</li><li>v = v₀ × (1 − 15% × cấp máy) × (1 + 10% × cấp lương)</li><li>Doanh thu = R₀ × (1 + 14% máy) × (1 + 6% lương) × (1,05 nếu có HTX) × giá quý × hao hụt × (0,75 nếu tinh thần &lt; 30)</li><li>m = doanh thu − c − v; m' = m/v</li></ul>
-<h3>Tinh thần công nhân</h3><ul><li>Mỗi quý: −6 nếu chưa tăng lương, 0 ở cấp 1, +3 ở cấp 2, +6 ở cấp 3.</li><li>Dưới 30: năng suất −25%. Về 0: công nhân bỏ việc, bạn thua.</li></ul>
-<h3>Thẻ sự kiện (cuối mỗi quý)</h3><ul><li>Cơ hội: EVFTA, RCEP, vốn hỗ trợ, bao tiêu, chuyển đổi số. Có chứng nhận hoặc hợp tác xã thì hưởng nhiều hơn.</li><li>Thách thức: mặn, dịch bệnh, rào cản kỹ thuật, hàng giá rẻ, vật tư tăng, rớt giá, bão lũ.</li></ul>
-<h3>Loại tái sản xuất mỗi quý</h3><ul><li>Tổng tư bản tăng &gt; 5%: mở rộng. Trong ±5%: giản đơn. Giảm &gt; 5%: thu hẹp.</li></ul>
-<h3>Thắng, thua</h3><ul><li><b>Thắng ★:</b> sau 12 quý, tư bản ≥ 1.500 triệu + có chứng nhận + tinh thần ≥ 40. ★★ nếu ≥ 2.200, ★★★ nếu ≥ 3.000.</li><li><b>Thua:</b> tinh thần = 0; hoặc hết vốn mà không còn ô nào để gieo; hoặc tư bản cuối &lt; 500.</li></ul></div>`;
+const $ = i => document.getElementById(i);
+
+// AUDIO SYNTHESIZER (Native Web Audio API)
+let soundEnabled = true;
+let audioCtx = null;
+function initAudio() {
+  if (!audioCtx) {
+    try {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    } catch(e){}
+  }
+}
+function playTone(freq, type, duration, delay) {
+  if (!soundEnabled) return;
+  initAudio();
+  if (!audioCtx) return;
+  setTimeout(() => {
+    try {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type || "sine";
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch(e){}
+  }, delay || 0);
+}
+function sfxPlant() { playTone(330, "triangle", 0.15); playTone(440, "sine", 0.15, 60); }
+function sfxHarvest() { playTone(523, "sine", 0.12); playTone(659, "sine", 0.15, 70); playTone(784, "triangle", 0.25, 140); }
+function sfxCard() { playTone(440, "triangle", 0.2); playTone(554, "sine", 0.3, 100); }
+function toggleSound() {
+  soundEnabled = !soundEnabled;
+  $("soundBtn").innerHTML = soundEnabled ? "🔊 Âm thanh" : "🔇 Tắt tiếng";
+}
+
+// THEME SUPPORT
+function toggleTheme() {
+  const cur = document.documentElement.getAttribute("data-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const nxt = cur === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", nxt);
+  try { localStorage.setItem("theme", nxt); } catch(e){}
+  updateThemeBtn();
+}
+function updateThemeBtn() {
+  const b = $("themeBtn");
+  if (!b) return;
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark" || (!document.documentElement.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  b.innerHTML = isDark ? "☀️ Sáng" : "🌙 Tối";
+}
+(function(){
+  try {
+    const s = localStorage.getItem("theme");
+    if (s) document.documentElement.setAttribute("data-theme", s);
+  } catch(e){}
+})();
+
+// GAME DATA (PRESERVED CONTENT 100%)
+const SEC = {
+  rice: { n: "Lúa gạo (Đồng Tháp)", e: "🌾", c: 40, v: 20, g: 2, r: 95, salt: .4, dis: .1, d: "Dễ chơi: vốn thấp, lãi mỏng, chu kỳ 2 quý. Dễ bị xâm nhập mặn." },
+  fish: { n: "Thủy sản (cá tra, tôm)", e: "🐟", c: 80, v: 40, g: 3, r: 215, salt: .2, dis: .4, d: "Lãi cao nhưng vốn lớn, dễ dịch bệnh, chịu rào cản kỹ thuật nặng." },
+  fruit: { n: "Trái cây (xoài, sầu riêng)", e: "🥭", c: 60, v: 30, g: 3, r: 175, salt: .4, dis: .1, d: "Giá trị xuất khẩu cao nếu đạt chuẩn, nhạy với xâm nhập mặn." }
+};
+
+const INV = {
+  tech: { i: "⚙️", n: "Máy móc, công nghệ", p: [150, 250, 350], d: "+14% năng suất, −15% chi phí lao động, nhưng c tăng 10%" },
+  skill: { i: "🎓", n: "Tăng lương và đào tạo", p: [60, 90, 120], d: "Tinh thần +0/+3/+6 mỗi quý, +6% năng suất, v tăng 10%" },
+  cert: { i: "📋", n: "Chứng nhận quốc tế (GlobalGAP, ASC)", p: [180], d: "Hưởng trọn ưu đãi EVFTA, RCEP; tránh rào cản kỹ thuật" },
+  coop: { i: "🤝", n: "Liên kết hợp tác xã", p: [120], d: "Giảm một nửa rủi ro thiên tai, giá bán +5%, đỡ bị ép giá" }
+};
+
+const kill = (s, p) => {
+  let n = 0;
+  s.plots.forEach(o => {
+    if (o.s == 1 && Math.random() < p) {
+      o.s = 0;
+      n++;
+    }
+  });
+  return n;
+};
+
+const EV = [
+  ["o", "🚢", "EVFTA: thuế vào EU giảm", "Thuế nhập khẩu vào châu Âu giảm theo lộ trình.", "Hội nhập mở rộng thị trường, giúp thực hiện giá trị (H'–T'), nhưng chỉ doanh nghiệp đủ năng lực mới hưởng lợi.", s => s.cert ? (s.pm *= 1.25, "Đã có chứng nhận: giá bán ×1,25.") : (s.pm *= 1.05, "Chưa có chứng nhận: chỉ hưởng giá ×1,05.")],
+  ["o", "🌏", "RCEP: thêm thị trường châu Á", "Đơn hàng từ Nhật Bản, Hàn Quốc, Trung Quốc tăng.", "Thị trường rộng hơn mở đường cho tái sản xuất mở rộng, kèm đòi hỏi về tiêu chuẩn.", s => s.cert ? (s.cash += 80, s.pm *= 1.1, "Đạt chuẩn: +80 triệu tiền cọc, giá ×1,1.") : "Chưa đạt chuẩn: bỏ lỡ đơn hàng."],
+  ["o", "🏦", "Quỹ hỗ trợ khởi nghiệp", "Địa phương hỗ trợ vốn cho doanh nghiệp nhỏ và vừa.", "Vốn là điểm xuất phát của tuần hoàn T–H…SX…H'–T'; tích lũy cần nguồn vốn.", s => (s.cash += 80, "+80 triệu tiền mặt.")],
+  ["o", "🤝", "Hợp tác xã bao tiêu sản phẩm", "Một hợp tác xã lớn tìm đối tác ổn định.", "Liên kết giúp tích tụ và tập trung tư bản, tăng sức cạnh tranh.", s => s.coop ? (s.pm *= 1.15, "Đã vào hợp tác xã: giá ×1,15.") : (s.pm *= 1.04, "Chưa vào hợp tác xã: giá ×1,04.")],
+  ["o", "💻", "Hỗ trợ chuyển đổi số", "Nhà nước hỗ trợ 50% chi phí đổi mới.", "Đổi mới kỹ thuật nâng năng suất lao động, tạo giá trị thặng dư siêu ngạch.", s => (s.disc = .5, "Khoản đầu tư kế tiếp giảm 50%.")],
+  ["c", "🌊", "Xâm nhập mặn", "Hạn mặn kéo dài ở vùng ven biển.", "Sản xuất nông nghiệp gắn với tự nhiên, tư bản bị đình trệ trong khâu sản xuất.", s => { const n = kill(s, SEC[s.sec].salt * (s.coop ? .5 : 1)); return n ? "Mất " + n + " ô đang canh tác (mất cả c và v đã ứng)." : "May mắn, không ô nào bị hại."; }],
+  ["c", "🦠", "Dịch bệnh lan nhanh", "Dịch bệnh bùng phát trong vùng sản xuất.", "Rủi ro làm đứt vòng tuần hoàn: tư bản ứng ra không quay về thành tiền.", s => { const n = kill(s, SEC[s.sec].dis * (s.coop ? .5 : 1)); return n ? "Mất " + n + " ô đang canh tác." : "May mắn, không ô nào bị hại."; }],
+  ["c", "📋", "Rào cản kỹ thuật, truy xuất nguồn gốc", "Thị trường nhập khẩu siết tiêu chuẩn xanh.", "Cạnh tranh quốc tế buộc phải đổi mới; doanh nghiệp không đạt chuẩn bị loại khỏi thị trường.", s => s.cert ? "Đã đạt chuẩn: không bị ảnh hưởng." : (s.pm *= .7, "Chưa đạt chuẩn: giá bán ×0,7.")],
+  ["c", "📦", "Hàng nhập khẩu giá rẻ tràn vào", "Hàng ngoại cạnh tranh trực tiếp trên thị trường nội địa.", "Quy luật cạnh tranh: chi phí cao hơn mức hao phí xã hội cần thiết thì thua.", s => s.tech >= 2 ? (s.pm *= .95, "Máy móc tốt, chi phí thấp: giá ×0,95.") : (s.pm *= s.coop ? .92 : .85, "Giá bán ×" + (s.coop ? "0,92" : "0,85") + ".")],
+  ["c", "⛽", "Giá vật tư tăng mạnh", "Phân bón, thức ăn, xăng dầu đồng loạt tăng.", "Tư bản bất biến (c) tăng làm thu hẹp giá trị thặng dư.", s => (s.cm = 1.3, "Chi phí c khi gieo trồng quý này ×1,3.")],
+  ["c", "📉", "Giá nông sản rớt", "Được mùa mất giá, thương lái ép giá.", "Quy luật giá trị và cung cầu: đơn lẻ thì yếu thế khi thương lượng.", s => (s.pm *= s.coop ? .88 : .75, "Giá bán ×" + (s.coop ? "0,88" : "0,75") + ".")],
+  ["c", "🌀", "Bão lũ bất thường", "Mưa bão gây ngập nhiều khu vực.", "Thiên tai phá hủy tư liệu sản xuất đã ứng ra.", s => { const n = kill(s, .25); s.cash -= 30; return "Mất " + n + " ô và 30 triệu sửa chữa."; }],
+  ["n", "☀️", "Một quý bình lặng", "Không có biến động lớn.", "Tái sản xuất diễn ra bình thường, hãy tập trung tích lũy.", s => "Không thay đổi."]
+];
+
+const RULES = `<div class="rules">
+<h3>⚙️ Một quý gồm 3 bước</h3>
+<ul>
+  <li><b>Gieo:</b> bấm ô trống, ứng c + v (T–H).</li>
+  <li><b>Sản xuất:</b> cây lớn sau 2–3 quý (H…SX…H').</li>
+  <li><b>Thu hoạch:</b> bấm ô chín để thu doanh thu (H'–T'). Chín quá 1 quý bị hao hụt 25% mỗi quý.</li>
+</ul>
+<h3>📐 Công thức</h3>
+<ul>
+  <li>c = c₀ × (1 + 10% × cấp máy) × hệ số vật tư</li>
+  <li>v = v₀ × (1 − 15% × cấp máy) × (1 + 10% × cấp lương)</li>
+  <li>Doanh thu = R₀ × (1 + 14% máy) × (1 + 6% lương) × (1,05 nếu có HTX) × giá quý × hao hụt × (0,75 nếu tinh thần &lt; 30)</li>
+  <li>m = doanh thu − c − v; m' = m/v</li>
+</ul>
+<h3>💖 Tinh thần công nhân</h3>
+<ul>
+  <li>Mỗi quý: −6 nếu chưa tăng lương, 0 ở cấp 1, +3 ở cấp 2, +6 ở cấp 3.</li>
+  <li>Dưới 30: năng suất −25%. Về 0: công nhân bỏ việc, bạn thua.</li>
+</ul>
+<h3>🎴 Thẻ sự kiện (cuối mỗi quý)</h3>
+<ul>
+  <li>Cơ hội: EVFTA, RCEP, vốn hỗ trợ, bao tiêu, chuyển đổi số. Có chứng nhận hoặc hợp tác xã thì hưởng nhiều hơn.</li>
+  <li>Thách thức: mặn, dịch bệnh, rào cản kỹ thuật, hàng giá rẻ, vật tư tăng, rớt giá, bão lũ.</li>
+</ul>
+<h3>📈 Loại tái sản xuất mỗi quý</h3>
+<ul>
+  <li>Tổng tư bản tăng &gt; 5%: mở rộng. Trong ±5%: giản đơn. Giảm &gt; 5%: thu hẹp.</li>
+</ul>
+<h3>🏆 Thắng, thua</h3>
+<ul>
+  <li><b>Thắng ★:</b> sau 12 quý, tư bản ≥ 1.500 triệu + có chứng nhận + tinh thần ≥ 40. ★★ nếu ≥ 2.200, ★★★ nếu ≥ 3.000.</li>
+  <li><b>Thua:</b> tinh thần = 0; hoặc hết vốn mà không còn ô nào để gieo; hoặc tư bản cuối &lt; 500.</li>
+</ul>
+</div>`;
+
 let S;
-const K=()=>S.cash+S.fixed+S.plots.reduce((a,p)=>a+(p.s?p.cc+p.vv:0),0);
-const cost=()=>{const d=SEC[S.sec];return{c:Math.round(d.c*S.cm*(1+.1*S.tech)),v:Math.round(d.v*(1-.15*S.tech)*(1+.1*S.skill))}};
-const rev=p=>{const d=SEC[S.sec];return Math.round(d.r*(1+.14*S.tech)*(1+.06*S.skill)*(S.coop?1.05:1)*S.pm*(S.morale<30?.75:1)*Math.max(.25,1-.25*p.w))};
-const f=n=>Math.round(n).toLocaleString("vi-VN");
-const sg=n=>(n>0?"+":n<0?"−":"")+f(Math.abs(n));
-const LG=(t,a,c)=>{const l=S.lg[S.lg.length-1];if(l&&l.q==S.q&&l.t==t&&l.c==c){l.a+=a;l.n++}else S.lg.push({q:S.q,t,a,c,n:1})};
-const CI={rev:"🧺",cv:"🌱",inv:"🏗️",ev:"🎴"},GS={rice:["🌱","🌿"],fish:["🥚","🐠"],fruit:["🌱","🌳"]};
-const ledger=q=>{const a=S.lg.filter(x=>x.q==q);return a.length?`<table>${a.map(x=>`<tr><td>${CI[x.c]} ${x.t}${x.n>1?" ×"+x.n:""}</td><td class="${x.a<0?"ng":"ps"}">${sg(x.a)}</td></tr>`).join("")}<tr><td><b>Cộng quý ${q}</b></td><td>${sg(a.reduce((s,x)=>s+x.a,0))}</td></tr></table>`:`<p class="lg">Chưa có giao dịch nào ở quý ${q}.</p>`};
-function wf(t,b,st){let v=b;const a=[["Gốc",b,0]];st.forEach(s=>{const n=v*s[1];a.push([s[0],n,n-v]);v=n});const mx=Math.max(...a.map(x=>x[1]));
-return `<div class="wf"><b>${t}: ${Math.round(v)}</b>${a.map(x=>`<div class="wr"><span>${x[0]}</span><div><i class="${x[2]<-.5?"dn":x[2]>.5?"up":""}" style="width:${x[1]/mx*100}%"></i></div><em class="${x[2]<-.5?"ng":x[2]>.5?"ps":""}">${x[2]?sg(Math.round(x[2])):x[0]=="Gốc"?Math.round(x[1]):"giữ nguyên"}</em></div>`).join("")}</div>`}
-const dl=n=>n?`<span class="dl ${n>0?"up":"dn"}">${n>0?"▲":"▼"}${f(Math.abs(n))}</span>`:"";
-function hudx(){const k=K(),q=Math.min(S.q,12),P=S.pv,fc=["😠","😟","🙂","😀"][S.morale<20?0:S.morale<40?1:S.morale<70?2:3],
-C=(y,l,v,x,b)=>`<button class="chip" onclick="why('${y}')"><small>${l} ⓘ</small><b>${v}</b>${x||""}${b||""}</button>`;
-$("hud").innerHTML=C("time","Thời gian","Năm "+Math.ceil(q/4)+", quý "+((q-1)%4+1))+C("cash","Tiền mặt",f(S.cash)+" tr",dl(S.cash-P.cash))+C("k","Tổng tư bản",f(k)+" tr",dl(k-P.k),`<div class="bar"><i style="width:${Math.min(100,k/15)}%"></i></div>`)+C("mo","Tinh thần "+fc,S.morale,dl(S.morale-P.m),`<div class="bar"><i style="width:${S.morale}%;background:${S.morale<30?"var(--bad)":"var(--ac)"}"></i></div>`)+C("price","Giá bán quý này","×"+S.pm.toFixed(2))}
-function scene(){const q=Math.min(S.q,12),i=(q-1)%4,sk=[["#ffd9e8","#fff3d6"],["#7cc8f5","#d6f0ff"],["#ffcf91","#ffe9c7"],["#8a9bb0","#c5cfda"]][i],bad=S.card&&S.card.t=="c",e=$("scene");
-e.style.background=`linear-gradient(${sk[0]},${sk[1]} 62%,#3f9aa8 62%)`;
-e.innerHTML=`<div class="pill">${SEC[S.sec].e} ${SEC[S.sec].n} · Năm ${Math.ceil(q/4)}, quý ${i+1} · ${["Xuân","Hè","Thu","Mùa mưa"][i]}</div><span class="sun">${i==3||bad?"⛈️":"☀️"}</span><span class="cl" style="top:14px;animation-delay:-8s">☁️</span><span class="cl" style="top:40px;animation-delay:-24s">☁️</span><div class="bld">🌴🏠${"⚙️".repeat(S.tech)}${S.tech>1?"🚜":""}${S.cert?"🏅":""}${S.coop?"🤝":""}${"🎓".repeat(S.skill)}🌴</div><div class="wk">${"👷".repeat(Math.min(5,S.plots.filter(p=>p.s).length))} ${["😠","😟","🙂","😀"][S.morale<20?0:S.morale<40?1:S.morale<70?2:3]}</div><span class="bt">🛶</span>`}
-function rep(pv,q){const g=c=>S.lg.filter(x=>x.q==q&&x.c==c).reduce((a,x)=>a+x.a,0),k=K(),rows=[["Doanh thu thu hoạch",g("rev")],["Ứng c + v để gieo",g("cv")],["Đầu tư, mở rộng",g("inv")],["Thẻ sự kiện (tiền mặt)",g("ev")]];
-return `<table class="rp">${rows.map(r=>`<tr><td>${r[0]}</td><td class="${r[1]<0?"ng":r[1]>0?"ps":""}">${sg(r[1])}</td></tr>`).join("")}<tr><td><b>Tiền mặt</b></td><td>${f(pv.cash)} → ${f(S.cash)}</td></tr><tr><td><b>Tổng tư bản</b></td><td>${f(pv.k)} → ${f(k)} (${sg(k-pv.k)})</td></tr><tr><td><b>Tinh thần</b></td><td>${pv.m} → ${S.morale} (${S.md>0?"+":""}${S.md}, do ${S.skill?"lương và đào tạo cấp "+S.skill:"chưa tăng lương"})</td></tr></table>`}
-function expl(){const{c,v}=cost(),d=SEC[S.sec],rv=rev({w:0}),m=rv-c-v,q=Math.min(S.q,12);
-return `<p class="lg">Thanh xanh là yếu tố làm con số tăng, thanh đỏ là yếu tố làm giảm.</p>`+wf("Doanh thu mỗi ô",d.r,[["Máy móc",1+.14*S.tech],["Lương, đào tạo",1+.06*S.skill],["Hợp tác xã",S.coop?1.05:1],["Giá quý này",S.pm],["Tinh thần thấp",S.morale<30?.75:1]])+wf("Chi phí c mỗi ô",d.c,[["Máy móc",1+.1*S.tech],["Giá vật tư",S.cm]])+wf("Chi phí v mỗi ô",d.v,[["Máy móc",1-.15*S.tech],["Lương, đào tạo",1+.1*S.skill]])+`<table><tr><td>Lãi m mỗi ô = ${rv} − ${c} − ${v}</td><td class="${m<0?"ng":"ps"}">${sg(m)}</td></tr><tr><td>Tỷ suất m' = m/v</td><td>${Math.round(m/v*100)}%</td></tr></table><h2 style="margin-top:12px">Sổ biến động tiền mặt</h2>`+ledger(q)+(q>1?ledger(q-1):"")}
-function why(k){let t,b;const kk=K(),inP=S.plots.reduce((a,p)=>a+(p.s?p.cc+p.vv:0),0);
-if(k=="cash"){t="Vì sao tiền mặt biến động?";b=ledger(S.q)+`<p class="lg">Tiền mặt tăng khi thu hoạch, giảm khi ứng c + v, đầu tư, mở ô hoặc gặp thẻ xấu. Mũi tên là chênh lệch so với đầu quý.</p>`}
-else if(k=="k"){t="Tổng tư bản gồm những gì?";b=`<table><tr><td>Tiền mặt</td><td>${f(S.cash)}</td></tr><tr><td>Tài sản đầu tư (máy, chứng nhận, đất)</td><td>${f(S.fixed)}</td></tr><tr><td>Vốn đang nằm trong ô sản xuất (c + v đã ứng)</td><td>${f(inP)}</td></tr><tr><td><b>Tổng</b></td><td>${f(kk)}</td></tr></table><p class="lg">Gieo trồng và đầu tư chỉ đổi dạng vốn nên tổng không đổi. Tổng tăng nhờ giá trị thặng dư m khi thu hoạch, và giảm khi mất mùa, hao hụt hoặc gặp thẻ xấu.</p>`}
-else if(k=="mo"){t="Vì sao tinh thần là "+S.morale+"?";b=`<table><tr><td>Mức lương, đào tạo hiện tại</td><td>Cấp ${S.skill}/3</td></tr><tr><td>Thay đổi mỗi quý</td><td class="${S.skill?"ps":"ng"}">${sg([-6,0,3,6][S.skill])}</td></tr><tr><td>Năng suất bị phạt −25% (dưới 30)</td><td>${S.morale<30?"Đang bị":"Chưa"}</td></tr><tr><td>Bỏ việc (về 0)</td><td>Còn ${S.skill?"an toàn":Math.ceil(S.morale/6)+" quý"}</td></tr></table><p class="lg">Muốn tinh thần tăng, hãy đầu tư tăng lương và đào tạo.</p>`}
-else if(k=="price"){t="Giá bán quý này ×"+S.pm.toFixed(2);b=(S.card?`<p>Do thẻ: <b>${S.card.i} ${S.card.n}</b><br>${S.card.r}</p>`:"<p>Chưa có thẻ nào, giá chuẩn ×1,00.</p>")+`<p class="lg">Giá chỉ áp dụng cho các lần thu hoạch trong quý này, rồi trở về ×1,00 khi kết thúc quý. Xem tab "Vì sao?" để biết giá tác động doanh thu ra sao.</p>`}
-else{t="Thời gian";b=`<p>Trò chơi có 12 quý (3 năm). Mỗi lần kết thúc quý: cây lớn thêm 1 quý, tinh thần thay đổi, bốc một thẻ sự kiện và giá trở về ×1,00.</p>`}
-$("ov").innerHTML=`<div class="ov" onclick="if(event.target==this)$('ov').innerHTML=''"><div class="card"><h2>${t}</h2>${b}<button class="b go" onclick="$('ov').innerHTML=''">Đóng</button></div></div>`}
-function pop(el,t,c){const r=el.getBoundingClientRect(),s=document.createElement("span");s.className="fl "+(c||"");s.textContent=t;s.style.left=r.left+r.width/2+"px";s.style.top=r.top+"px";document.body.appendChild(s);setTimeout(()=>s.remove(),1100)}
-function start(k){S={sec:k,q:1,cash:500,fixed:0,tech:0,skill:0,cert:0,coop:0,morale:60,pm:1,cm:1,disc:1,tc:0,tv:0,tm:0,card:null,prevK:500,rp:"",msg:"",over:null,tab:"inv",nw:-1,h:[500],lg:[],md:0,pv:{cash:500,k:500,m:60},plots:Array.from({length:9},(_,i)=>({u:i<4,s:0,t:0,cc:0,vv:0,w:0}))};$("ov").innerHTML="";R()}
-function plant(p){const{c,v}=cost();if(S.cash<c+v)return 0;S.cash-=c+v;LG("Gieo: c "+c+" + v "+v+" mỗi ô",-(c+v),"cv");Object.assign(p,{s:1,t:SEC[S.sec].g,cc:c,vv:v,w:0});return 1}
-function harv(p){const r=rev(p);LG("Thu hoạch"+(p.w?" (hao hụt "+p.w*25+"%)":""),r,"rev");S.cash+=r;S.tc+=p.cc;S.tv+=p.vv;S.tm+=r-p.cc-p.vv;p.s=0;return r}
-function plot(i,el){if(S.over)return;const p=S.plots[i],{c,v}=cost();S.msg="";S.nw=-1;
-if(!p.u){if(S.cash<100)S.msg="Cần 100 triệu để mở ô đất.";else{S.cash-=100;S.fixed+=100;p.u=1;LG("Mở thêm ô đất",-100,"inv");pop(el,"−100","bad")}}
-else if(p.s==0){if(plant(p)){S.nw=i;pop(el,"−"+(c+v),"bad")}else S.msg="Không đủ vốn: cần c + v = "+(c+v)+" triệu."}
-else if(p.s==2)pop(el,"+"+harv(p));
-R()}
-function all(k,el){if(S.over)return;let n=0,t=0;S.msg="";S.plots.forEach(p=>{if(k=="p"&&p.u&&p.s==0&&plant(p))n++;if(k=="h"&&p.s==2){t+=harv(p);n++}});if(!n)S.msg=k=="p"?"Không có ô trống hoặc không đủ vốn.":"Chưa có ô nào chín.";else pop(el,(k=="p"?"Gieo "+n+" ô":"+"+t),k=="p"?"bad":"");R()}
-function inv(k,el){if(S.over)return;const L=S[k],I=INV[k];if(L>=I.p.length)return;const b=Math.round(I.p[L]*S.disc);
-if(S.cash<b){S.msg="Không đủ vốn: cần "+b+" triệu.";R();return}
-S.cash-=b;S.fixed+=b;S.disc=1;S[k]++;LG("Đầu tư: "+I.n,-b,"inv");S.msg="";pop(el,"−"+b,"bad");R()}
-function tab(x){S.tab=x;R()}
-function endQ(){if(S.over)return;const pv=S.pv,e0=S.cash;
-S.plots.forEach(p=>{if(p.s==2)p.w++;else if(p.s==1&&--p.t<=0){p.s=2;p.w=0}});
-S.md=[-6,0,3,6][S.skill];S.morale=Math.max(0,Math.min(100,S.morale+S.md));S.pm=1;S.cm=1;S.msg="";S.nw=-1;
-const e=EV[Math.floor(Math.random()*EV.length)];
-S.card={t:e[0],i:e[1],n:e[2],d:e[3],m:e[4],r:e[5](S)};if(S.cash!=e0)LG("Thẻ: "+e[2],S.cash-e0,"ev");
-const k=K(),g=(k-S.prevK)/S.prevK;
-S.rp=g>.05?"Tái sản xuất mở rộng":g>=-.05?"Tái sản xuất giản đơn":"Tái sản xuất thu hẹp";S.prevK=k;S.h.push(k);S.q++;
-const{c,v}=cost();
-if(S.morale<=0)S.over="lm";else if(!S.plots.some(p=>p.s)&&S.cash<c+v)S.over="lc";
-else if(S.q>12)S.over=(k>=1500&&S.cert&&S.morale>=40)?"win":k>=500?"ok":"lk";
-const qq=S.q-1;S.pv={cash:S.cash,k:K(),m:S.morale};R();const c0=S.card;
-$("ov").innerHTML=`<div class="ov"><div class="card evc ${c0.t}"><div class="big">${c0.i}</div><p style="text-align:center;margin:0;color:var(--mu)">${c0.t=="o"?"Cơ hội":c0.t=="c"?"Thách thức":"Bình thường"}</p><h2>${c0.n}</h2><p>${c0.d}</p><div class="r">${c0.r}</div><em>Góc lý luận: ${c0.m}</em><b>Tổng kết quý ${qq}</b>${rep(pv,qq)}<button class="b go" style="margin-top:10px" onclick="closeEv()">Tiếp tục</button></div></div>`}
-function closeEv(){$("ov").innerHTML="";if(S.over)end()}
-function R(){const d=SEC[S.sec],{c,v}=cost(),k=K(),q=Math.min(S.q,12);
-$("trk").innerHTML=Array.from({length:12},(_,i)=>`<i class="${i+1<q?"d":i+1==q?"c":""}"></i>`).join("");
-$("hud").innerHTML=`<div class="chip"><small>Thời gian</small><b>Năm ${Math.ceil(q/4)}, quý ${(q-1)%4+1}</b></div><div class="chip"><small>Tiền mặt</small><b>${f(S.cash)} tr</b></div><div class="chip"><small>Tổng tư bản (mục tiêu 1.500)</small><b>${f(k)} tr</b><div class="bar"><i style="width:${Math.min(100,k/15)}%"></i></div></div><div class="chip"><small>Tinh thần công nhân</small><b>${S.morale}</b><div class="bar"><i style="width:${S.morale}%;background:${S.morale<30?"var(--bad)":"var(--ac)"}"></i></div></div><div class="chip"><small>Giá bán quý này</small><b>×${S.pm.toFixed(2)}</b></div>`;
-hudx();scene();$("goal").innerHTML=[["Tư bản ≥ 1.500",k>=1500],["Có chứng nhận quốc tế",S.cert],["Tinh thần ≥ 40",S.morale>=40]].map(x=>`<span class="tag ${x[1]?"ok":""}">${x[1]?"✓":"○"} ${x[0]}</span>`).join("");
-const rd=S.plots.filter(p=>p.s==2).length,em=S.plots.filter(p=>p.u&&!p.s).length;
-$("hint").textContent=S.morale<40&&!S.skill?"⚠️ Công nhân sắp bỏ việc: hãy đầu tư tăng lương và đào tạo.":rd?`🌾 Có ${rd} ô đã chín: bấm để thu hoạch (để lâu bị hao hụt).`:em&&S.cash>=c+v?"🟫 Bấm ô đất trống để gieo trồng.":!S.cert&&S.q>=3?"📋 Hãy cân nhắc lấy chứng nhận quốc tế để hưởng EVFTA, RCEP.":"⏭️ Bấm \"Kết thúc quý\" để bốc thẻ sự kiện.";
-const grid=S.plots.map((p,i)=>{const a=`onclick="plot(${i},this)"`;return !p.u?`<button class="pl lk" ${a}>🔒<small>Mở ô: 100</small></button>`:p.s==0?`<button class="pl" ${a}><span class="e">➕</span><small>Gieo −${c+v}</small></button>`:p.s==1?`<div class="pl gr ${S.nw==i?"nw":""}"><span class="e">${GS[S.sec][p.t==SEC[S.sec].g?0:1]}</span><small>còn ${p.t} quý</small><div class="pg"><i style="width:${(SEC[S.sec].g-p.t)/SEC[S.sec].g*100}%"></i></div></div>`:`<button class="pl rd" ${a}><span class="e">${d.e}</span><small>Thu +${rev(p)} · lãi ${rev(p)-p.cc-p.vv}${p.w?" ⚠️":""}</small></button>`}).join("");
-$("L").innerHTML=`<div class="card farm"><h2>${d.e} Trang trại của bạn: ${d.n}</h2><div class="grid ${S.sec}">${grid}</div><div class="msg">${S.msg}</div><div class="row"><button class="b half" onclick="all('p',this)">🌱 Gieo tất cả</button><button class="b half" onclick="all('h',this)">🧺 Thu hoạch tất cả</button></div><button class="b go" style="margin-top:8px" onclick="endQ()">⏭️ Kết thúc quý, bốc thẻ sự kiện</button></div>`;
-const T=(x,n)=>`<button class="tb ${S.tab==x?"on":""}" onclick="tab('${x}')">${n}</button>`;
-const last=S.card?`<div class="mini ${S.card.t}"><b>${S.card.i} ${S.card.n}</b><br>${S.card.r}</div>`:`<div class="mini">Chưa bốc thẻ nào. Mỗi cuối quý bạn sẽ bốc một thẻ.</div>`;
-let B="";
-if(S.tab=="inv")B=(S.disc<1?`<p><b>🎉 Khoản đầu tư kế tiếp được giảm 50%.</b></p>`:"")+Object.keys(INV).map(x=>{const I=INV[x],L=S[x],mx=L>=I.p.length,b=mx?0:Math.round(I.p[L]*S.disc);return `<button class="b" ${mx?"disabled":""} onclick="inv('${x}',this)"><span>${I.i} ${I.n}${I.p.length>1?" (cấp "+L+"/"+I.p.length+")":""}<small>${I.d}</small></span><b>${mx?"✓":b}</b></button>`}).join("");
-else if(S.tab=="mac"){const tt=S.tc+S.tv+Math.max(0,S.tm)||1,mp=S.tv?Math.round(S.tm/S.tv*100)+"%":"–",mx=Math.max(1800,...S.h),pts=S.h.map((y,i)=>(i*(280/12)).toFixed(0)+","+(80-y/mx*76).toFixed(0)).join(" ");
-B=`<div class="stk"><i style="width:${S.tc/tt*100}%;background:#5a7bd8"></i><i style="width:${S.tv/tt*100}%;background:var(--gd)"></i><i style="width:${Math.max(0,S.tm)/tt*100}%;background:var(--good)"></i></div><div class="lg">Xanh dương: c, vàng: v, xanh lá: m (trên phần đã thu hoạch)</div><table><tr><td>Mỗi ô: c / v</td><td>${c} / ${v}</td></tr><tr><td>Đã thu hồi: c / v</td><td>${f(S.tc)} / ${f(S.tv)}</td></tr><tr><td>Giá trị thặng dư m</td><td>${f(S.tm)}</td></tr><tr><td>Tỷ suất m' = m/v</td><td>${mp}</td></tr><tr><td>Cấu tạo hữu cơ c/v</td><td>${(c/v).toFixed(2)}</td></tr><tr><td>Quý vừa rồi</td><td>${S.rp||"–"}</td></tr></table><p class="lg" style="margin-top:10px">Đường tổng tư bản qua các quý (nét đứt: mục tiêu 1.500)</p><svg viewBox="0 0 280 84" width="100%"><line x1="0" x2="280" y1="${80-1500/mx*76}" y2="${80-1500/mx*76}" stroke="var(--gd)" stroke-dasharray="4"/><polyline fill="none" stroke="var(--ac)" stroke-width="3" points="${pts}"/></svg>`}
-else if(S.tab=="ex")B=expl();else B=RULES;
-$("Rr").innerHTML=last+`<div class="card"><div class="tabs">${T("inv","Đầu tư")}${T("ex","Vì sao?")}${T("mac","Chỉ số Mác")}${T("rl","Luật")}</div>${B}</div>`;
-if(S.over&&!$("ov").innerHTML)end()}
-function end(){const o=S.over,k=K(),st=o=="win"?(k>=3000?3:k>=2200?2:1):0,
-T={win:["Chiến thắng: tái sản xuất mở rộng bền vững","Bạn tích lũy đủ vốn, đạt chuẩn quốc tế và giữ được người lao động."],ok:["Tồn tại, chưa bứt phá","Bạn giữ được doanh nghiệp (tái sản xuất giản đơn) nhưng chưa đủ điều kiện thắng: tư bản ≥ 1.500, có chứng nhận, tinh thần ≥ 40."],lm:["Thua: công nhân bỏ việc","Tinh thần về 0. Chỉ ép lao động mà không đầu tư lương và đào tạo thì sản xuất đình trệ."],lc:["Thua: hết vốn","Không còn vốn ứng cho vòng sản xuất mới, tuần hoàn tư bản bị đứt."],lk:["Thua: vốn thu hẹp","Tổng tư bản cuối kỳ dưới mức ban đầu (tái sản xuất thu hẹp)."]}[o];
-$("ov").innerHTML=`<div class="ov"><div class="card"><div class="big">${o=="win"?"🏆":o=="ok"?"🌾":"💔"}</div><h2 style="text-align:center">${T[0]}</h2><p style="text-align:center;font-size:24px;margin:0">${"★".repeat(st)}</p><p>${T[1]}</p><table><tr><td>Tổng tư bản cuối</td><td>${f(k)} triệu (đầu: 500)</td></tr><tr><td>Giá trị thặng dư m</td><td>${f(S.tm)}</td></tr><tr><td>Tỷ suất m'</td><td>${S.tv?Math.round(S.tm/S.tv*100)+"%":"–"}</td></tr><tr><td>Chứng nhận / Hợp tác xã</td><td>${S.cert?"Có":"Chưa"} / ${S.coop?"Có":"Chưa"}</td></tr></table><p>Kết luận: muốn tái sản xuất mở rộng, doanh nghiệp phải tích lũy, đổi mới kỹ thuật, nâng chất lượng lao động và đạt chuẩn để tận dụng EVFTA, RCEP. Điều đó phù hợp với lý luận của Mác về tích lũy tư bản.</p><button class="b go" onclick="menu()">Chơi lại</button></div></div>`}
-function menu(){S=null;$("scene").innerHTML="";$("trk").innerHTML="";$("hud").innerHTML="";$("goal").innerHTML="";$("hint").textContent="Chọn một lĩnh vực để bắt đầu.";$("L").innerHTML="";$("Rr").innerHTML="";
-$("ov").innerHTML=`<div class="ov"><div class="card"><h2>Bạn là chủ một doanh nghiệp nhỏ ở Đồng bằng sông Cửu Long</h2><p>Có 500 triệu vốn và 12 quý. Gieo trồng, thu hoạch, đầu tư và đối phó với thẻ sự kiện EVFTA, RCEP, thiên tai. Mục tiêu: tư bản ≥ 1.500 triệu, có chứng nhận quốc tế, công nhân còn gắn bó.</p><div class="sc">${Object.keys(SEC).map(k=>{const s=SEC[k];return `<button class="b" onclick="start('${k}')"><span>${s.e} <b>${s.n}</b><small>${s.d}</small><small>Chi phí/ô: c ${s.c} + v ${s.v} · Doanh thu/ô: ${s.r} · Chu kỳ: ${s.g} quý</small></span></button>`}).join("")}</div></div></div>`}
+const K = () => S.cash + S.fixed + S.plots.reduce((a, p) => a + (p.s ? p.cc + p.vv : 0), 0);
+const cost = () => {
+  const d = SEC[S.sec];
+  return {
+    c: Math.round(d.c * S.cm * (1 + .1 * S.tech)),
+    v: Math.round(d.v * (1 - .15 * S.tech) * (1 + .1 * S.skill))
+  };
+};
+const rev = p => {
+  const d = SEC[S.sec];
+  return Math.round(d.r * (1 + .14 * S.tech) * (1 + .06 * S.skill) * (S.coop ? 1.05 : 1) * S.pm * (S.morale < 30 ? .75 : 1) * Math.max(.25, 1 - .25 * p.w));
+};
+const f = n => Math.round(n).toLocaleString("vi-VN");
+const sg = n => (n > 0 ? "+" : n < 0 ? "−" : "") + f(Math.abs(n));
+
+const LG = (t, a, c) => {
+  const l = S.lg[S.lg.length - 1];
+  if (l && l.q == S.q && l.t == t && l.c == c) {
+    l.a += a;
+    l.n++;
+  } else {
+    S.lg.push({ q: S.q, t, a, c, n: 1 });
+  }
+};
+
+const CI = { rev: "🧺", cv: "🌱", inv: "🏗️", ev: "🎴" };
+const GS = { rice: ["🌱", "🌿"], fish: ["🥚", "🐠"], fruit: ["🌱", "🌳"] };
+
+const ledger = q => {
+  const a = S.lg.filter(x => x.q == q);
+  return a.length
+    ? `<table>${a.map(x => `<tr><td>${CI[x.c]} ${x.t}${x.n > 1 ? " ×" + x.n : ""}</td><td class="${x.a < 0 ? "ng" : "ps"}">${sg(x.a)}</td></tr>`).join("")}<tr><td><b>Cộng quý ${q}</b></td><td><b>${sg(a.reduce((s, x) => s + x.a, 0))}</b></td></tr></table>`
+    : `<p class="lg">Chưa có giao dịch nào ở quý ${q}.</p>`;
+};
+
+function wf(t, b, st) {
+  let v = b;
+  const a = [["Gốc", b, 0]];
+  st.forEach(s => {
+    const n = v * s[1];
+    a.push([s[0], n, n - v]);
+    v = n;
+  });
+  const mx = Math.max(...a.map(x => x[1]));
+  return `<div class="wf"><b>${t}: ${Math.round(v)}</b>${a.map(x => `<div class="wr"><span>${x[0]}</span><div><i class="${x[2] < -.5 ? "dn" : x[2] > .5 ? "up" : ""}" style="width:${Math.max(4, x[1] / mx * 100)}%"></i></div><em class="${x[2] < -.5 ? "ng" : x[2] > .5 ? "ps" : ""}">${x[2] ? sg(Math.round(x[2])) : x[0] == "Gốc" ? Math.round(x[1]) : "giữ nguyên"}</em></div>`).join("")}</div>`;
+}
+
+const dl = n => n ? `<span class="dl ${n > 0 ? "up" : "dn"}">${n > 0 ? "▲" : "▼"}${f(Math.abs(n))}</span>` : "";
+
+function hudx() {
+  const k = K(), q = Math.min(S.q, 12), P = S.pv;
+  const fc = ["😠", "😟", "🙂", "😀"][S.morale < 20 ? 0 : S.morale < 40 ? 1 : S.morale < 70 ? 2 : 3];
+  
+  const C = (y, l, v, x, b) => `
+    <button class="chip" onclick="why('${y}')">
+      <div class="chip-header">
+        <span class="chip-title">${l}</span>
+        <span class="chip-info-btn">ⓘ</span>
+      </div>
+      <div class="chip-val-row">
+        <b>${v}</b>
+        ${x || ""}
+      </div>
+      ${b || ""}
+    </button>
+  `;
+  
+  $("hud").innerHTML = 
+    C("time", "Thời gian", "Năm " + Math.ceil(q / 4) + ", quý " + ((q - 1) % 4 + 1)) +
+    C("cash", "Tiền mặt", f(S.cash) + " tr", dl(S.cash - P.cash)) +
+    C("k", "Tổng tư bản", f(k) + " tr", dl(k - P.k), `<div class="bar"><i style="width:${Math.min(100, k / 15)}%"></i></div>`) +
+    C("mo", "Tinh thần " + fc, S.morale, dl(S.morale - P.m), `<div class="bar"><i style="width:${S.morale}%;background:${S.morale < 30 ? "var(--bad)" : "var(--ac)"}"></i></div>`) +
+    C("price", "Giá bán quý này", "×" + S.pm.toFixed(2));
+}
+
+function scene() {
+  const q = Math.min(S.q, 12), i = (q - 1) % 4;
+  const sk = [["#ffd9e8", "#fff3d6"], ["#7cc8f5", "#d6f0ff"], ["#ffcf91", "#ffe9c7"], ["#8a9bb0", "#c5cfda"]][i];
+  const bad = S.card && S.card.t == "c";
+  const e = $("scene");
+  
+  // Facilities string
+  const facilities = [];
+  if (S.tech > 0) facilities.push(`<span class="facility-item" title="Máy móc chế biến (Cấp ${S.tech})">${"⚙️".repeat(S.tech)}</span>`);
+  if (S.tech > 1) facilities.push(`<span class="facility-item" title="Cơ giới hóa nông nghiệp">🚜</span>`);
+  if (S.cert) facilities.push(`<span class="facility-item" title="Chứng nhận chuẩn quốc tế GlobalGAP/ASC">🏅</span>`);
+  if (S.coop) facilities.push(`<span class="facility-item" title="Trụ sở Hợp tác xã liên kết">🤝</span>`);
+  if (S.skill > 0) facilities.push(`<span class="facility-item" title="Trung tâm đào tạo tay nghề">${"🎓".repeat(S.skill)}</span>`);
+
+  e.style.background = `linear-gradient(${sk[0]}, ${sk[1]} 62%, #3f9aa8 62%)`;
+  e.innerHTML = `
+    <!-- Top left Contextual Pill -->
+    <div class="pill">${SEC[S.sec].e} ${SEC[S.sec].n} · Năm ${Math.ceil(q / 4)}, quý ${i + 1} · ${["Xuân", "Hè", "Thu", "Mùa mưa"][i]}</div>
+    
+    <!-- Faint Rainbow arc in good weather -->
+    ${!bad && i != 3 ? '<div class="rainbow"></div>' : ''}
+
+    <!-- Rotating Sun with lens aura -->
+    <div class="sun-wrap">
+      ${i != 3 && !bad ? '<div class="sun-rays"></div>' : ''}
+      <span class="sun-core">${i == 3 || bad ? "⛈️" : "☀️"}</span>
+    </div>
+
+    <!-- Drifting clouds -->
+    <span class="cl" style="top:10px;animation-delay:-6s">☁️</span>
+    <span class="cl cl-fast" style="animation-delay:-18s">☁️</span>
+
+    <!-- Storks flying across sky in V-formation -->
+    <div class="storks">
+      <svg class="stork" viewBox="0 0 24 16"><path d="M0 8 Q6 0 12 8 Q18 0 24 8 Q18 16 12 8 Q6 16 0 8 Z"/></svg>
+      <svg class="stork" style="animation-delay:0.18s;margin-top:6px" viewBox="0 0 24 16"><path d="M0 8 Q6 0 12 8 Q18 0 24 8 Q18 16 12 8 Q6 16 0 8 Z"/></svg>
+      <svg class="stork" style="animation-delay:0.36s;margin-top:12px" viewBox="0 0 24 16"><path d="M0 8 Q6 0 12 8 Q18 0 24 8 Q18 16 12 8 Q6 16 0 8 Z"/></svg>
+      <svg class="stork" style="animation-delay:0.54s;margin-top:18px" viewBox="0 0 24 16"><path d="M0 8 Q6 0 12 8 Q18 0 24 8 Q18 16 12 8 Q6 16 0 8 Z"/></svg>
+    </div>
+
+    <!-- Village flute kite (Cánh diều sáo) -->
+    <div class="kite-wrap" title="Cánh diều sáo đồng quê">
+      <div class="kite-body"></div>
+      <div class="kite-tail"></div>
+    </div>
+
+    <!-- Distant Wind Turbine (Điện gió) -->
+    <div class="wind-turbine" title="Năng lượng gió ĐBSCL">
+      <div class="turbine-rotor">
+        <div class="turbine-blade b1"></div>
+        <div class="turbine-blade b2"></div>
+        <div class="turbine-blade b3"></div>
+      </div>
+      <div class="turbine-pole"></div>
+    </div>
+
+    <!-- River bank & Swaying coconut palms -->
+    <div class="palms" title="Hàng dừa nước nghiêng bóng">🌴🌴</div>
+    <div class="river-bank"></div>
+
+    <!-- Thatched cottage with smoke puff -->
+    <div class="cottage-wrap" title="Mái nhà tranh ven sông">
+      <span>🏡</span>
+      <span class="smoke-puff">💨</span>
+    </div>
+
+    <!-- Water Buffalo (Con trâu là đầu cơ nghiệp) -->
+    <div class="buffalo" title="Con trâu là đầu cơ nghiệp">🐃</div>
+
+    <!-- Butterflies & Dragonflies -->
+    <div class="critters">
+      <span class="butterfly" title="Bướm vàng miệt vườn">🦋</span>
+      <span class="dragonfly" title="Chuồn chuồn ớt">🪰</span>
+    </div>
+
+    <!-- Farm Facilities (Tech, Cert, Coop, Skill) -->
+    <div class="bld">${facilities.join("")}</div>
+
+    <!-- Hardworking farm workers & dynamic morale -->
+    <div class="wk" title="Lực lượng lao động trang trại">
+      ${"👷".repeat(Math.min(5, S.plots.filter(p => p.s).length) || 1)} 
+      <span style="font-size:18px">${["😠", "😟", "🙂", "😀"][S.morale < 20 ? 0 : S.morale < 40 ? 1 : S.morale < 70 ? 2 : 3]}</span>
+    </div>
+    
+    <!-- Flowing River Water -->
+    <div class="river-water">
+      <div class="water-wave"></div>
+      
+      <!-- Purple floating water hyacinths (Hoa lục bình tím trôi sông) -->
+      <div class="hyacinths" title="Hoa lục bình trôi sông Tiền">
+        <span>🪻</span><span>🌿</span><span>🪻</span>
+      </div>
+
+      <!-- Flock of ducks swimming (Đàn vịt đồng) -->
+      <div class="duck-flock" title="Bầy vịt đồng bơi lội">
+        <span>🦆</span><span>🦆</span><span>🦆</span>
+      </div>
+
+      <!-- Wooden Sampan boat drifting (Xuồng ba lá) -->
+      <span class="bt" title="Xuồng ba lá chở nông sản miền Tây">🛶</span>
+      
+      <!-- Jumping fish (Aquaculture sector) -->
+      ${S.sec === "fish" ? '<span class="jumping-fish" title="Cá tra quẫy nước">🐟</span>' : ''}
+    </div>
+    
+    <!-- Rain layer & thunder flash during bad events -->
+    ${bad ? '<div class="rain-layer"></div>' : ''}
+  `;
+}
+
+function rep(pv, q) {
+  const g = c => S.lg.filter(x => x.q == q && x.c == c).reduce((a, x) => a + x.a, 0);
+  const k = K();
+  const rows = [
+    ["Doanh thu thu hoạch", g("rev")],
+    ["Ứng c + v để gieo", g("cv")],
+    ["Đầu tư, mở rộng", g("inv")],
+    ["Thẻ sự kiện (tiền mặt)", g("ev")]
+  ];
+  return `
+    <table class="rp">
+      ${rows.map(r => `<tr><td>${r[0]}</td><td class="${r[1] < 0 ? "ng" : r[1] > 0 ? "ps" : ""}">${sg(r[1])}</td></tr>`).join("")}
+      <tr><td><b>Tiền mặt</b></td><td><b>${f(pv.cash)} → ${f(S.cash)}</b></td></tr>
+      <tr><td><b>Tổng tư bản</b></td><td><b>${f(pv.k)} → ${f(k)} (${sg(k - pv.k)})</b></td></tr>
+      <tr><td><b>Tinh thần</b></td><td><b>${pv.m} → ${S.morale} (${S.md > 0 ? "+" : ""}${S.md}, do ${S.skill ? "lương và đào tạo cấp " + S.skill : "chưa tăng lương"})</b></td></tr>
+    </table>
+  `;
+}
+
+function expl() {
+  const { c, v } = cost(), d = SEC[S.sec], rv = rev({ w: 0 }), m = rv - c - v, q = Math.min(S.q, 12);
+  return `
+    <p class="lg">Thanh xanh là yếu tố làm con số tăng, thanh đỏ là yếu tố làm giảm.</p>
+    ${wf("Doanh thu mỗi ô", d.r, [["Máy móc", 1 + .14 * S.tech], ["Lương, đào tạo", 1 + .06 * S.skill], ["Hợp tác xã", S.coop ? 1.05 : 1], ["Giá quý này", S.pm], ["Tinh thần thấp", S.morale < 30 ? .75 : 1]])}
+    ${wf("Chi phí c mỗi ô", d.c, [["Máy móc", 1 + .1 * S.tech], ["Giá vật tư", S.cm]])}
+    ${wf("Chi phí v mỗi ô", d.v, [["Máy móc", 1 - .15 * S.tech], ["Lương, đào tạo", 1 + .1 * S.skill]])}
+    <table>
+      <tr><td>Lãi m mỗi ô = ${rv} − ${c} − ${v}</td><td class="${m < 0 ? "ng" : "ps"}">${sg(m)}</td></tr>
+      <tr><td>Tỷ suất m' = m/v</td><td>${Math.round(m / v * 100)}%</td></tr>
+    </table>
+    <h2 style="margin-top:14px">Sổ biến động tiền mặt</h2>
+    ${ledger(q)}
+    ${q > 1 ? ledger(q - 1) : ""}
+  `;
+}
+
+function why(k) {
+  let t, b;
+  const kk = K(), inP = S.plots.reduce((a, p) => a + (p.s ? p.cc + p.vv : 0), 0);
+  if (k == "cash") {
+    t = "Vì sao tiền mặt biến động?";
+    b = ledger(S.q) + `<p class="lg" style="margin-top:8px">Tiền mặt tăng khi thu hoạch, giảm khi ứng c + v, đầu tư, mở ô hoặc gặp thẻ xấu. Mũi tên là chênh lệch so với đầu quý.</p>`;
+  } else if (k == "k") {
+    t = "Tổng tư bản gồm những gì?";
+    b = `
+      <table>
+        <tr><td>Tiền mặt</td><td>${f(S.cash)}</td></tr>
+        <tr><td>Tài sản đầu tư (máy, chứng nhận, đất)</td><td>${f(S.fixed)}</td></tr>
+        <tr><td>Vốn đang nằm trong ô sản xuất (c + v đã ứng)</td><td>${f(inP)}</td></tr>
+        <tr><td><b>Tổng</b></td><td><b>${f(kk)}</b></td></tr>
+      </table>
+      <p class="lg" style="margin-top:8px">Gieo trồng và đầu tư chỉ đổi dạng vốn nên tổng không đổi. Tổng tăng nhờ giá trị thặng dư m khi thu hoạch, và giảm khi mất mùa, hao hụt hoặc gặp thẻ xấu.</p>
+    `;
+  } else if (k == "mo") {
+    t = "Vì sao tinh thần là " + S.morale + "?";
+    b = `
+      <table>
+        <tr><td>Mức lương, đào tạo hiện tại</td><td>Cấp ${S.skill}/3</td></tr>
+        <tr><td>Thay đổi mỗi quý</td><td class="${S.skill ? "ps" : "ng"}">${sg([-6, 0, 3, 6][S.skill])}</td></tr>
+        <tr><td>Năng suất bị phạt −25% (dưới 30)</td><td>${S.morale < 30 ? "Đang bị" : "Chưa"}</td></tr>
+        <tr><td>Bỏ việc (về 0)</td><td>Còn ${S.skill ? "an toàn" : Math.ceil(S.morale / 6) + " quý"}</td></tr>
+      </table>
+      <p class="lg" style="margin-top:8px">Muốn tinh thần tăng, hãy đầu tư tăng lương và đào tạo.</p>
+    `;
+  } else if (k == "price") {
+    t = "Giá bán quý này ×" + S.pm.toFixed(2);
+    b = (S.card ? `<p>Do thẻ: <b>${S.card.i} ${S.card.n}</b><br>${S.card.r}</p>` : "<p>Chưa có thẻ nào, giá chuẩn ×1,00.</p>") + `<p class="lg" style="margin-top:8px">Giá chỉ áp dụng cho các lần thu hoạch trong quý này, rồi trở về ×1,00 khi kết thúc quý. Xem tab "Vì sao?" để biết giá tác động doanh thu ra sao.</p>`;
+  } else {
+    t = "Thời gian";
+    b = `<p>Trò chơi có 12 quý (3 năm). Mỗi lần kết thúc quý: cây lớn thêm 1 quý, tinh thần thay đổi, bốc một thẻ sự kiện và giá trở về ×1,00.</p>`;
+  }
+  $("ov").innerHTML = `<div class="ov" onclick="if(event.target==this)$('ov').innerHTML=''"><div class="card"><h2>${t}</h2>${b}<button class="b go" style="margin-top:12px" onclick="$('ov').innerHTML=''">Đóng</button></div></div>`;
+}
+
+function pop(el, t, c) {
+  if (!el) return;
+  const r = el.getBoundingClientRect(), s = document.createElement("span");
+  s.className = "fl " + (c || "");
+  s.textContent = t;
+  s.style.left = (r.left + r.width / 2) + "px";
+  s.style.top = r.top + "px";
+  document.body.appendChild(s);
+  setTimeout(() => s.remove(), 1100);
+}
+
+function start(k) {
+  S = {
+    sec: k, q: 1, cash: 500, fixed: 0, tech: 0, skill: 0, cert: 0, coop: 0,
+    morale: 60, pm: 1, cm: 1, disc: 1, tc: 0, tv: 0, tm: 0, card: null,
+    prevK: 500, rp: "", msg: "", over: null, tab: "inv", nw: -1, h: [500],
+    lg: [], md: 0, pv: { cash: 500, k: 500, m: 60 },
+    plots: Array.from({ length: 9 }, (_, i) => ({ u: i < 4, s: 0, t: 0, cc: 0, vv: 0, w: 0 }))
+  };
+  $("ov").innerHTML = "";
+  sfxCard();
+  R();
+}
+
+function plant(p) {
+  const { c, v } = cost();
+  if (S.cash < c + v) return 0;
+  S.cash -= c + v;
+  LG("Gieo: c " + c + " + v " + v + " mỗi ô", -(c + v), "cv");
+  Object.assign(p, { s: 1, t: SEC[S.sec].g, cc: c, vv: v, w: 0 });
+  return 1;
+}
+
+function harv(p) {
+  const r = rev(p);
+  LG("Thu hoạch" + (p.w ? " (hao hụt " + p.w * 25 + "%)" : ""), r, "rev");
+  S.cash += r;
+  S.tc += p.cc;
+  S.tv += p.vv;
+  S.tm += r - p.cc - p.vv;
+  p.s = 0;
+  return r;
+}
+
+function plot(i, el) {
+  if (S.over) return;
+  const p = S.plots[i], { c, v } = cost();
+  S.msg = "";
+  S.nw = -1;
+  if (!p.u) {
+    if (S.cash < 100) S.msg = "Cần 100 triệu để mở ô đất.";
+    else {
+      S.cash -= 100;
+      S.fixed += 100;
+      p.u = 1;
+      LG("Mở thêm ô đất", -100, "inv");
+      pop(el, "−100", "bad");
+      sfxPlant();
+    }
+  } else if (p.s == 0) {
+    if (plant(p)) {
+      S.nw = i;
+      pop(el, "−" + (c + v), "bad");
+      sfxPlant();
+    } else {
+      S.msg = "Không đủ vốn: cần c + v = " + (c + v) + " triệu.";
+    }
+  } else if (p.s == 2) {
+    const earned = harv(p);
+    pop(el, "+" + earned);
+    sfxHarvest();
+  }
+  R();
+}
+
+function all(k, el) {
+  if (S.over) return;
+  let n = 0, t = 0;
+  S.msg = "";
+  S.plots.forEach(p => {
+    if (k == "p" && p.u && p.s == 0 && plant(p)) n++;
+    if (k == "h" && p.s == 2) {
+      t += harv(p);
+      n++;
+    }
+  });
+  if (!n) {
+    S.msg = k == "p" ? "Không có ô trống hoặc không đủ vốn." : "Chưa có ô nào chín.";
+  } else {
+    pop(el, (k == "p" ? "Gieo " + n + " ô" : "+" + t), k == "p" ? "bad" : "");
+    if (k == "p") sfxPlant(); else sfxHarvest();
+  }
+  R();
+}
+
+function inv(k, el) {
+  if (S.over) return;
+  const L = S[k], I = INV[k];
+  if (L >= I.p.length) return;
+  const b = Math.round(I.p[L] * S.disc);
+  if (S.cash < b) {
+    S.msg = "Không đủ vốn: cần " + b + " triệu.";
+    R();
+    return;
+  }
+  S.cash -= b;
+  S.fixed += b;
+  S.disc = 1;
+  S[k]++;
+  LG("Đầu tư: " + I.n, -b, "inv");
+  S.msg = "";
+  pop(el, "−" + b, "bad");
+  sfxPlant();
+  R();
+}
+
+function tab(x) {
+  if (!S) return;
+  S.tab = x;
+  R();
+}
+
+function endQ() {
+  if (S.over) return;
+  const pv = S.pv, e0 = S.cash;
+  S.plots.forEach(p => {
+    if (p.s == 2) p.w++;
+    else if (p.s == 1 && --p.t <= 0) {
+      p.s = 2;
+      p.w = 0;
+    }
+  });
+  
+  S.md = [-6, 0, 3, 6][S.skill];
+  S.morale = Math.max(0, Math.min(100, S.morale + S.md));
+  S.pm = 1;
+  S.cm = 1;
+  S.msg = "";
+  S.nw = -1;
+  
+  const e = EV[Math.floor(Math.random() * EV.length)];
+  S.card = { t: e[0], i: e[1], n: e[2], d: e[3], m: e[4], r: e[5](S) };
+  if (S.cash != e0) LG("Thẻ: " + e[2], S.cash - e0, "ev");
+  
+  const k = K(), g = (k - S.prevK) / S.prevK;
+  S.rp = g > .05 ? "Tái sản xuất mở rộng" : g >= -.05 ? "Tái sản xuất giản đơn" : "Tái sản xuất thu hẹp";
+  S.prevK = k;
+  S.h.push(k);
+  S.q++;
+  
+  const { c, v } = cost();
+  if (S.morale <= 0) S.over = "lm";
+  else if (!S.plots.some(p => p.s) && S.cash < c + v) S.over = "lc";
+  else if (S.q > 12) S.over = (k >= 1500 && S.cert && S.morale >= 40) ? "win" : k >= 500 ? "ok" : "lk";
+  
+  const qq = S.q - 1;
+  S.pv = { cash: S.cash, k: K(), m: S.morale };
+  R();
+  sfxCard();
+  
+  const c0 = S.card;
+  $("ov").innerHTML = `
+    <div class="ov">
+      <div class="card evc ${c0.t}">
+        <div class="big">${c0.i}</div>
+        <p style="text-align:center;margin:0;color:var(--mu);font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:0.05em">
+          ${c0.t == "o" ? "🌟 Cơ hội" : c0.t == "c" ? "⚡ Thách thức" : "🌤️ Bình thường"}
+        </p>
+        <h2>${c0.n}</h2>
+        <p style="text-align:center;margin-bottom:8px">${c0.d}</p>
+        <div class="r">${c0.r}</div>
+        <em><b>Góc lý luận:</b> ${c0.m}</em>
+        <b style="display:block;margin:12px 0 6px">Tổng kết quý ${qq}</b>
+        ${rep(pv, qq)}
+        <button class="b go" style="margin-top:14px" onclick="closeEv()">Tiếp tục sang quý mới ➔</button>
+      </div>
+    </div>
+  `;
+}
+
+function closeEv() {
+  $("ov").innerHTML = "";
+  if (S.over) end();
+}
+
+function R() {
+  const d = SEC[S.sec], { c, v } = cost(), k = K(), q = Math.min(S.q, 12);
+  
+  // Update year tags
+  const y = Math.ceil(q / 4);
+  $("yt1").className = "year-tag" + (y == 1 ? " active" : "");
+  $("yt2").className = "year-tag" + (y == 2 ? " active" : "");
+  $("yt3").className = "year-tag" + (y == 3 ? " active" : "");
+  
+  // Track 12 nodes
+  $("trk").innerHTML = Array.from({ length: 12 }, (_, i) => {
+    const qNum = i + 1;
+    const isDone = qNum < q;
+    const isCur = qNum == q;
+    return `<div class="track-node ${isDone ? "done" : isCur ? "active" : ""}">Q${qNum}</div>`;
+  }).join("");
+
+  hudx();
+  scene();
+  
+  $("goal").innerHTML = [
+    ["Tư bản ≥ 1.500", k >= 1500],
+    ["Có chứng nhận quốc tế", S.cert],
+    ["Tinh thần ≥ 40", S.morale >= 40]
+  ].map(x => `<span class="goal-tag ${x[1] ? "ok" : ""}"><span class="goal-status-dot"></span>${x[1] ? "✓" : "○"} ${x[0]}</span>`).join("");
+  
+  const rd = S.plots.filter(p => p.s == 2).length, em = S.plots.filter(p => p.u && !p.s).length;
+  const hintTxt = S.morale < 40 && !S.skill ? "⚠️ Công nhân sắp bỏ việc: hãy đầu tư tăng lương và đào tạo." : rd ? `🌾 Có ${rd} ô đã chín: bấm để thu hoạch (để lâu bị hao hụt).` : em && S.cash >= c + v ? "🟫 Bấm ô đất trống để gieo trồng." : !S.cert && S.q >= 3 ? "📋 Hãy cân nhắc lấy chứng nhận quốc tế để hưởng EVFTA, RCEP." : "⏭️ Bấm \"Kết thúc quý\" để bốc thẻ sự kiện.";
+  
+  $("hint").innerHTML = `<span class="hint-icon">💡</span><span>${hintTxt}</span>`;
+  
+  const grid = S.plots.map((p, i) => {
+    const a = `onclick="plot(${i},this)"`;
+    return !p.u 
+      ? `<button class="pl lk" ${a} title="Bấm để mở ô đất"><span class="e">🔒</span><small>Mở ô: 100 tr</small></button>`
+      : p.s == 0 
+        ? `<button class="pl" ${a} title="Bấm để gieo trồng"><span class="e">➕</span><small>Gieo −${c + v} tr</small></button>`
+        : p.s == 1 
+          ? `<div class="pl gr ${S.nw == i ? "nw" : ""}" title="Đang trong chu kỳ sản xuất"><span class="e">${GS[S.sec][p.t == SEC[S.sec].g ? 0 : 1]}</span><small>còn ${p.t} quý</small><div class="pg"><i style="width:${(SEC[S.sec].g - p.t) / SEC[S.sec].g * 100}%"></i></div></div>`
+          : `<button class="pl rd" ${a} title="Đã chín! Bấm để thu hoạch"><span class="e">${d.e}</span><small>Thu +${rev(p)} · lãi ${rev(p) - p.cc - p.vv}${p.w ? " ⚠️" : ""}</small></button>`;
+  }).join("");
+
+  $("L").innerHTML = `
+    <div class="card farm">
+      <div class="farm-header-row">
+        <h2>${d.e} Trang trại: ${d.n}</h2>
+        <div class="farm-cost-pills">
+          <span class="cost-pill" title="Tư bản bất biến (vật tư, giống, phân bón)">c: ${c} tr</span>
+          <span class="cost-pill" title="Tư bản khả biến (tiền lương nhân công)">v: ${v} tr</span>
+          <span class="cost-pill total" title="Tổng chi phí ứng trước">c+v: ${c + v} tr</span>
+        </div>
+      </div>
+      <div class="grid ${S.sec}">${grid}</div>
+      <div class="msg">${S.msg}</div>
+      <div class="row">
+        <button class="b half" onclick="all('p',this)">🌱 Gieo tất cả</button>
+        <button class="b half" onclick="all('h',this)">🧺 Thu hoạch tất cả</button>
+      </div>
+      <button class="b go" style="margin-top:10px" onclick="endQ()">⏭️ Kết thúc quý, bốc thẻ sự kiện ➔</button>
+    </div>
+  `;
+
+  const T = (x, n) => `<button class="tb ${S.tab == x ? "on" : ""}" onclick="tab('${x}')">${n}</button>`;
+  const last = S.card 
+    ? `<div class="mini ${S.card.t}"><b>${S.card.i} ${S.card.n}</b><br>${S.card.r}</div>`
+    : `<div class="mini">Chưa bốc thẻ nào. Mỗi cuối quý bạn sẽ bốc một thẻ.</div>`;
+  
+  let B = "";
+  if (S.tab == "inv") {
+    B = (S.disc < 1 ? `<div class="hint-box" style="margin-bottom:10px">🎉 <b>Ưu đãi số:</b> Khoản đầu tư kế tiếp được giảm 50%.</div>` : "") + 
+      Object.keys(INV).map(x => {
+        const I = INV[x], L = S[x], mx = L >= I.p.length, b = mx ? 0 : Math.round(I.p[L] * S.disc);
+        return `
+          <button class="b" ${mx ? "disabled" : ""} onclick="inv('${x}',this)">
+            <span>
+              <b>${I.i} ${I.n}</b>${I.p.length > 1 ? " (cấp " + L + "/" + I.p.length + ")" : ""}
+              <small>${I.d}</small>
+            </span>
+            <b style="font-family:var(--font-mono);font-size:15px">${mx ? "✓ Đã đạt" : b + " tr"}</b>
+          </button>
+        `;
+      }).join("");
+  } else if (S.tab == "mac") {
+    const tt = S.tc + S.tv + Math.max(0, S.tm) || 1;
+    const mp = S.tv ? Math.round(S.tm / S.tv * 100) + "%" : "–";
+    const mx = Math.max(1800, ...S.h);
+    const pts = S.h.map((y, i) => (i * (280 / 12)).toFixed(0) + "," + (80 - y / mx * 76).toFixed(0)).join(" ");
+    
+    // Marxian Capital Circulation Diagram
+    B = `
+      <div class="marx-circuit">
+        <div style="font-size:11.5px;font-weight:700;color:var(--mu);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.04em">
+          Tuần hoàn tư bản: T – H ... SX ... H' – T'
+        </div>
+        <div class="circuit-steps">
+          <div class="circuit-node"><b>T</b>Tiền tệ<br><small>${f(S.cash)}tr</small></div>
+          <span class="circuit-arrow">➔</span>
+          <div class="circuit-node"><b>c + v</b>Tư liệu & NLĐ<br><small>${c}+${v}tr</small></div>
+          <span class="circuit-arrow">➔</span>
+          <div class="circuit-node"><b>...SX...</b>Sản xuất<br><small>${S.plots.filter(p=>p.s==1).length} ô</small></div>
+          <span class="circuit-arrow">➔</span>
+          <div class="circuit-node"><b>H'</b>Hàng hóa<br><small>${S.plots.filter(p=>p.s==2).length} chín</small></div>
+          <span class="circuit-arrow">➔</span>
+          <div class="circuit-node" style="border-color:var(--good);color:var(--good)"><b>T'</b>T + m<br><small>m'=${mp}</small></div>
+        </div>
+      </div>
+
+      <div class="stk">
+        <i style="width:${S.tc / tt * 100}%;background:#3b82f6" title="Tư bản bất biến c"></i>
+        <i style="width:${S.tv / tt * 100}%;background:var(--gd)" title="Tư bản khả biến v"></i>
+        <i style="width:${Math.max(0, S.tm) / tt * 100}%;background:var(--good)" title="Giá trị thặng dư m"></i>
+      </div>
+      <div class="lg">Xanh dương: c (tư liệu SX), vàng: v (tiền lương), xanh lá: m (thặng dư)</div>
+      <table>
+        <tr><td>Mỗi ô: c / v</td><td>${c} / ${v} tr</td></tr>
+        <tr><td>Đã thu hồi: c / v</td><td>${f(S.tc)} / ${f(S.tv)} tr</td></tr>
+        <tr><td>Giá trị thặng dư m</td><td class="ps">${f(S.tm)} tr</td></tr>
+        <tr><td>Tỷ suất m' = m/v</td><td>${mp}</td></tr>
+        <tr><td>Cấu tạo hữu cơ c/v</td><td>${(c / v).toFixed(2)}</td></tr>
+        <tr><td>Quý vừa rồi</td><td>${S.rp || "–"}</td></tr>
+      </table>
+      <p class="lg" style="margin-top:12px;margin-bottom:4px"><b>Đường tổng tư bản qua các quý</b> (nét đứt vàng: mục tiêu 1.500 tr)</p>
+      <div style="background:var(--sf-subtle);border:1px solid var(--bd-light);border-radius:10px;padding:8px">
+        <svg viewBox="0 0 280 84" width="100%" height="84" style="display:block">
+          <defs>
+            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--ac)" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="var(--ac)" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line x1="0" x2="280" y1="${80 - 1500 / mx * 76}" y2="${80 - 1500 / mx * 76}" stroke="var(--gd)" stroke-width="1.5" stroke-dasharray="4"/>
+          <polygon fill="url(#chartGrad)" points="0,84 ${pts} ${(S.h.length-1)*(280/12)},84"/>
+          <polyline fill="none" stroke="var(--ac)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="${pts}"/>
+        </svg>
+      </div>
+    `;
+  } else if (S.tab == "ex") {
+    B = expl();
+  } else {
+    B = RULES;
+  }
+
+  $("Rr").innerHTML = last + `<div class="card"><div class="tabs">${T("inv", "🏗️ Đầu tư")}${T("ex", "💡 Vì sao?")}${T("mac", "📊 Chỉ số Mác")}${T("rl", "📖 Luật")}</div>${B}</div>`;
+
+  if (S.over && !$("ov").innerHTML) end();
+}
+
+function end() {
+  const o = S.over, k = K(), st = o == "win" ? (k >= 3000 ? 3 : k >= 2200 ? 2 : 1) : 0;
+  const T = {
+    win: ["Chiến thắng: tái sản xuất mở rộng bền vững", "Bạn tích lũy đủ vốn, đạt chuẩn quốc tế và giữ được người lao động."],
+    ok: ["Tồn tại, chưa bứt phá", "Bạn giữ được doanh nghiệp (tái sản xuất giản đơn) nhưng chưa đủ điều kiện thắng: tư bản ≥ 1.500, có chứng nhận, tinh thần ≥ 40."],
+    lm: ["Thua: công nhân bỏ việc", "Tinh thần về 0. Chỉ ép lao động mà không đầu tư lương và đào tạo thì sản xuất đình trệ."],
+    lc: ["Thua: hết vốn", "Không còn vốn ứng cho vòng sản xuất mới, tuần hoàn tư bản bị đứt."],
+    lk: ["Thua: vốn thu hẹp", "Tổng tư bản cuối kỳ dưới mức ban đầu (tái sản xuất thu hẹp)."]
+  }[o];
+
+  if (o == "win") {
+    playTone(523, "sine", 0.2); playTone(659, "sine", 0.2, 120); playTone(784, "sine", 0.25, 240); playTone(1046, "triangle", 0.5, 360);
+  } else {
+    playTone(330, "sawtooth", 0.3); playTone(293, "sawtooth", 0.4, 150); playTone(220, "sawtooth", 0.6, 320);
+  }
+
+  $("ov").innerHTML = `
+    <div class="ov">
+      <div class="card">
+        <div class="big">${o == "win" ? "🏆" : o == "ok" ? "🌾" : "💔"}</div>
+        <h2 style="text-align:center;justify-content:center;font-size:19px">${T[0]}</h2>
+        <p style="text-align:center;font-size:28px;margin:2px 0 8px;color:var(--gd);animation:bounce-card-hero 0.6s ease">${"★".repeat(st)}</p>
+        <p style="text-align:center">${T[1]}</p>
+        <table style="margin:12px 0">
+          <tr><td>Tổng tư bản cuối</td><td><b>${f(k)} triệu</b> (đầu: 500)</td></tr>
+          <tr><td>Giá trị thặng dư m</td><td><b>${f(S.tm)} triệu</b></td></tr>
+          <tr><td>Tỷ suất m'</td><td><b>${S.tv ? Math.round(S.tm / S.tv * 100) + "%" : "–"}</b></td></tr>
+          <tr><td>Chứng nhận / Hợp tác xã</td><td><b>${S.cert ? "Có" : "Chưa"} / ${S.coop ? "Có" : "Chưa"}</b></td></tr>
+        </table>
+        <p class="lg" style="background:var(--sf-subtle);padding:10px;border-radius:10px;border:1px solid var(--bd-light)">
+          <b>Kết luận:</b> muốn tái sản xuất mở rộng, doanh nghiệp phải tích lũy, đổi mới kỹ thuật, nâng chất lượng lao động và đạt chuẩn để tận dụng EVFTA, RCEP. Điều đó phù hợp với lý luận của Mác về tích lũy tư bản.
+        </p>
+        <button class="b go" style="margin-top:12px" onclick="menu()">Chơi lại 🔄</button>
+      </div>
+    </div>
+  `;
+}
+
+function menu() {
+  S = null;
+  $("scene").innerHTML = "";
+  $("trk").innerHTML = "";
+  $("hud").innerHTML = "";
+  $("goal").innerHTML = "";
+  $("hint").textContent = "Chọn một lĩnh vực để bắt đầu.";
+  $("L").innerHTML = "";
+  $("Rr").innerHTML = "";
+  
+  $("ov").innerHTML = `
+    <div class="ov">
+      <div class="card" style="max-width:580px">
+        <div style="text-align:center;margin-bottom:14px">
+          <div style="font-size:46px;margin-bottom:4px;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.15))">🌾</div>
+          <h2 style="justify-content:center;font-size:19px">Bạn là chủ một doanh nghiệp nhỏ ở Đồng bằng sông Cửu Long</h2>
+          <p style="color:var(--mu);font-size:13px;line-height:1.55;max-width:480px;margin:auto">
+            Có 500 triệu vốn và 12 quý. Gieo trồng, thu hoạch, đầu tư và đối phó với thẻ sự kiện EVFTA, RCEP, thiên tai. Mục tiêu: tư bản ≥ 1.500 triệu, có chứng nhận quốc tế, công nhân còn gắn bó.
+          </p>
+        </div>
+        <div class="sc">
+          ${Object.keys(SEC).map(k => {
+            const s = SEC[k];
+            const badge = k === "rice" ? "🟢 Dễ tiếp cận" : k === "fish" ? "🔴 Vốn lớn · Lãi cao" : "🟡 Giá trị xuất khẩu";
+            return `
+              <button class="b" onclick="start('${k}')">
+                <span>
+                  <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px">
+                    <b style="font-size:16px">${s.e} ${s.n}</b>
+                    <span style="font-size:11px;padding:1px 7px;border-radius:10px;background:var(--bd-light);font-weight:600">${badge}</span>
+                  </div>
+                  <small style="margin:4px 0">${s.d}</small>
+                  <small style="color:var(--ac);font-weight:600">Chi phí/ô: c ${s.c} + v ${s.v} · Doanh thu/ô: ${s.r} · Chu kỳ: ${s.g} quý</small>
+                </span>
+                <span style="font-size:18px;color:var(--ac)">➔</span>
+              </button>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+updateThemeBtn();
 menu();
-</script></body></html>
+</script>
+</body>
+</html>
