@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chủ doanh nghiệp miền Tây</title>
+<style>
+:root{--bg:#d9eef0;--bg2:#eaf6e4;--sf:#fff;--tx:#10302f;--mu:#587270;--ac:#0e7c7b;--gd:#c98a12;--bd:#bcd6d3;--bad:#c0392b;--good:#1f8a4c;--s1:#9b6a3f;--s2:#7a4e2b;--lf:#59b85f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0c1f22;--bg2:#12261c;--sf:#173030;--tx:#e3f1ed;--mu:#93aca7;--ac:#4fc3b8;--gd:#e8b84a;--bd:#2c4a47;--bad:#ff8a80;--good:#7bd88f;--s1:#6d4a2c;--s2:#573920}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0c1f22;--bg2:#12261c;--sf:#173030;--tx:#e3f1ed;--mu:#93aca7;--ac:#4fc3b8;--gd:#e8b84a;--bd:#2c4a47;--bad:#ff8a80;--good:#7bd88f;--s1:#6d4a2c;--s2:#573920}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(var(--bg),var(--bg2));color:var(--tx);font:15px/1.5 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:12px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+h1{font-size:19px;margin:0}
+.track{display:flex;gap:4px}.track i{width:16px;height:8px;border-radius:4px;background:var(--bd)}.track .d{background:var(--ac)}.track .c{background:var(--gd);width:26px}
+.hud{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:8px}
+.chip{background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:6px 10px}
+.chip small{color:var(--mu);display:block;font-size:12px}.chip b{font-size:18px}
+.bar{height:7px;background:var(--bd);border-radius:5px;overflow:hidden;margin-top:3px}.bar i{display:block;height:100%;background:var(--ac);transition:width .5s}
+.goal{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;font-size:13px}
+.tag{padding:2px 10px;border-radius:12px;background:var(--sf);border:1px solid var(--bd)}.tag.ok{background:var(--good);color:#fff;border-color:var(--good)}
+.hint{background:var(--sf);border:1px dashed var(--gd);border-radius:10px;padding:8px 12px;margin-bottom:10px;font-weight:500}
+.cols{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:12px;align-items:start}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:12px}
+.card h2{font-size:15px;margin:0 0 8px}
+.farm{background:linear-gradient(var(--sf),color-mix(in srgb,var(--lf) 14%,var(--sf)))}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pl{aspect-ratio:1;border-radius:12px;border:0;color:#fff;font:inherit;font-size:34px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;background:linear-gradient(var(--s1),var(--s2));box-shadow:inset 0 -5px 0 rgba(0,0,0,.2);transition:transform .12s}
+.pl:hover{transform:translateY(-2px)}.pl small{font-size:12px;opacity:.95;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.pl.gr{background:linear-gradient(#6bbf59,#3f8f46);cursor:default}.pl.gr:hover{transform:none}
+.pl.rd{background:linear-gradient(#f2c14e,#d9951b);animation:pulse 1.4s infinite}
+.pl.lk{background:repeating-linear-gradient(45deg,var(--bd),var(--bd) 8px,var(--bg) 8px,var(--bg) 16px);color:var(--mu)}.pl.lk small{text-shadow:none}
+.pl.nw .e{animation:bn .5s}.e{font-size:36px;line-height:1.1}
+@keyframes pulse{50%{box-shadow:inset 0 -5px 0 rgba(0,0,0,.2),0 0 0 5px rgba(242,193,78,.45)}}
+@keyframes bn{0%{transform:scale(.3)}60%{transform:scale(1.3)}100%{transform:scale(1)}}
+@keyframes fl{to{transform:translate(-50%,-60px);opacity:0}}
+@keyframes fp{from{transform:perspective(700px) rotateY(90deg) scale(.7);opacity:0}}
+.fl{position:fixed;z-index:30;font-weight:700;font-size:18px;color:var(--good);text-shadow:0 1px 3px rgba(0,0,0,.4);animation:fl 1.1s forwards;pointer-events:none;transform:translateX(-50%)}.fl.bad{color:var(--bad)}
+.row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.b{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;text-align:left;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:10px;padding:9px 11px;margin-bottom:6px;font:inherit;cursor:pointer}
+.b small{color:var(--mu);display:block;font-size:12px}.b:disabled{opacity:.5;cursor:default}.b:not(:disabled):hover{border-color:var(--ac)}
+.b:focus-visible,.pl:focus-visible,.tb:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.go{background:var(--ac);color:#fff;border-color:var(--ac);font-weight:700;justify-content:center;font-size:16px}
+.half{flex:1;margin:0;justify-content:center}
+.tabs{display:flex;gap:4px;margin-bottom:10px}.tb{flex:1;padding:7px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:8px;font:inherit;cursor:pointer}.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.mini{border-left:5px solid var(--mu);background:var(--sf);border-radius:8px;padding:8px 10px;margin-bottom:10px;border:1px solid var(--bd);border-left-width:5px}.mini.o{border-left-color:var(--good)}.mini.c{border-left-color:var(--bad)}
+table{width:100%;border-collapse:collapse}td{padding:4px 0;border-bottom:1px solid var(--bd)}td:last-child{text-align:right;font-weight:600}
+.stk{display:flex;height:16px;border-radius:8px;overflow:hidden;margin:6px 0}.stk i{display:block}
+.lg{font-size:12px;color:var(--mu);margin-bottom:8px}.rules{font-size:14px}.rules h3{font-size:14px;margin:12px 0 4px}.rules ul{margin:0;padding-left:18px}
+.msg{color:var(--bad);min-height:20px;font-size:13px}
+.ov{position:fixed;inset:0;background:rgba(5,20,22,.72);display:flex;padding:16px;z-index:20;overflow:auto}
+.ov>.card{max-width:540px;margin:auto;animation:fp .5s}
+.evc{border-top:8px solid var(--mu)}.evc.o{border-top-color:var(--good)}.evc.c{border-top-color:var(--bad)}
+.big{font-size:64px;text-align:center;line-height:1.2}.evc h2{font-size:19px;text-align:center}
+.r{font-weight:700;padding:8px;border-radius:8px;background:var(--bg);margin:8px 0}.evc em{color:var(--mu);font-style:normal;font-size:13px;display:block;margin-bottom:10px}
+.sc{display:grid;gap:8px}.sc .b{padding:12px}
+button.chip{font:inherit;color:var(--tx);text-align:left;cursor:pointer}button.chip:hover{border-color:var(--ac)}
+.dl{font-size:12px;font-weight:700;margin-left:6px}.dl.up,.ps{color:var(--good)}.dl.dn,.ng{color:var(--bad)}
+.scene{position:relative;height:132px;border-radius:14px;overflow:hidden;margin-bottom:10px}
+.scene .pill{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.88);color:#10302f;border-radius:14px;padding:3px 12px;font-weight:600;font-size:13px;z-index:2}
+.sun{position:absolute;right:22px;top:8px;font-size:36px}.cl{position:absolute;font-size:30px;opacity:.9;animation:dr 40s linear infinite}.bt{position:absolute;bottom:10px;font-size:30px;animation:dr 22s linear infinite}
+.bld{position:absolute;left:0;right:0;bottom:38%;text-align:center;font-size:32px;letter-spacing:4px}.wk{position:absolute;left:12px;bottom:6px;font-size:22px;background:rgba(255,255,255,.75);border-radius:12px;padding:0 8px}
+@keyframes dr{from{left:-12%}to{left:105%}}
+.wf{margin-bottom:12px}.wf>b{font-size:13px}.wr{display:grid;grid-template-columns:104px 1fr 64px;gap:6px;align-items:center;font-size:12px;margin-top:3px}.wr>div{height:10px;background:var(--bd);border-radius:5px;overflow:hidden}.wr i{display:block;height:100%;background:var(--ac)}.wr i.up{background:var(--good)}.wr i.dn{background:var(--bad)}.wr em{font-style:normal;text-align:right;font-weight:600}
+.pg{width:72%;height:5px;background:rgba(0,0,0,.3);border-radius:3px;overflow:hidden;margin-top:3px}.pg i{display:block;height:100%;background:#fff}
+.fish .pl:not(.lk):not(.rd){background:linear-gradient(#6cc3e8,#2b82b3)}.fish .pl.gr{background:linear-gradient(#4aa6d6,#1f6d9c)}.fruit .pl:not(.lk):not(.rd):not(.gr){background:linear-gradient(#b08a5b,#8b6a3f)}.fruit .pl.gr{background:linear-gradient(#7ac36a,#3f8f46)}
+.rp td:first-child{font-size:13px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><div class="w">
+<div class="top"><h1>🌾 Chủ doanh nghiệp miền Tây</h1><div class="track" id="trk"></div></div><div id="scene" class="scene"></div>
+<div id="hud" class="hud"></div><div id="goal" class="goal"></div><div id="hint" class="hint"></div>
+<div class="cols"><div id="L"></div><div id="Rr"></div></div>
+</div><div id="ov"></div>
+<script>
+const $=i=>document.getElementById(i);
+const SEC={
+rice:{n:"Lúa gạo (Đồng Tháp)",e:"🌾",c:40,v:20,g:2,r:95,salt:.4,dis:.1,d:"Dễ chơi: vốn thấp, lãi mỏng, chu kỳ 2 quý. Dễ bị xâm nhập mặn."},
+fish:{n:"Thủy sản (cá tra, tôm)",e:"🐟",c:80,v:40,g:3,r:215,salt:.2,dis:.4,d:"Lãi cao nhưng vốn lớn, dễ dịch bệnh, chịu rào cản kỹ thuật nặng."},
+fruit:{n:"Trái cây (xoài, sầu riêng)",e:"🥭",c:60,v:30,g:3,r:175,salt:.4,dis:.1,d:"Giá trị xuất khẩu cao nếu đạt chuẩn, nhạy với xâm nhập mặn."}};
+const INV={
+tech:{i:"⚙️",n:"Máy móc, công nghệ",p:[150,250,350],d:"+14% năng suất, −15% chi phí lao động, nhưng c tăng 10%"},
+skill:{i:"🎓",n:"Tăng lương và đào tạo",p:[60,90,120],d:"Tinh thần +0/+3/+6 mỗi quý, +6% năng suất, v tăng 10%"},
+cert:{i:"📋",n:"Chứng nhận quốc tế (GlobalGAP, ASC)",p:[180],d:"Hưởng trọn ưu đãi EVFTA, RCEP; tránh rào cản kỹ thuật"},
+coop:{i:"🤝",n:"Liên kết hợp tác xã",p:[120],d:"Giảm một nửa rủi ro thiên tai, giá bán +5%, đỡ bị ép giá"}};
+const kill=(s,p)=>{let n=0;s.plots.forEach(o=>{if(o.s==1&&Math.random()<p){o.s=0;n++}});return n};
+const EV=[
+["o","🚢","EVFTA: thuế vào EU giảm","Thuế nhập khẩu vào châu Âu giảm theo lộ trình.","Hội nhập mở rộng thị trường, giúp thực hiện giá trị (H'–T'), nhưng chỉ doanh nghiệp đủ năng lực mới hưởng lợi.",s=>s.cert?(s.pm*=1.25,"Đã có chứng nhận: giá bán ×1,25."):(s.pm*=1.05,"Chưa có chứng nhận: chỉ hưởng giá ×1,05.")],
+["o","🌏","RCEP: thêm thị trường châu Á","Đơn hàng từ Nhật Bản, Hàn Quốc, Trung Quốc tăng.","Thị trường rộng hơn mở đường cho tái sản xuất mở rộng, kèm đòi hỏi về tiêu chuẩn.",s=>s.cert?(s.cash+=80,s.pm*=1.1,"Đạt chuẩn: +80 triệu tiền cọc, giá ×1,1."):"Chưa đạt chuẩn: bỏ lỡ đơn hàng."],
+["o","🏦","Quỹ hỗ trợ khởi nghiệp","Địa phương hỗ trợ vốn cho doanh nghiệp nhỏ và vừa.","Vốn là điểm xuất phát của tuần hoàn T–H…SX…H'–T'; tích lũy cần nguồn vốn.",s=>(s.cash+=80,"+80 triệu tiền mặt.")],
+["o","🤝","Hợp tác xã bao tiêu sản phẩm","Một hợp tác xã lớn tìm đối tác ổn định.","Liên kết giúp tích tụ và tập trung tư bản, tăng sức cạnh tranh.",s=>s.coop?(s.pm*=1.15,"Đã vào hợp tác xã: giá ×1,15."):(s.pm*=1.04,"Chưa vào hợp tác xã: giá ×1,04.")],
+["o","💻","Hỗ trợ chuyển đổi số","Nhà nước hỗ trợ 50% chi phí đổi mới.","Đổi mới kỹ thuật nâng năng suất lao động, tạo giá trị thặng dư siêu ngạch.",s=>(s.disc=.5,"Khoản đầu tư kế tiếp giảm 50%.")],
+["c","🌊","Xâm nhập mặn","Hạn mặn kéo dài ở vùng ven biển.","Sản xuất nông nghiệp gắn với tự nhiên, tư bản bị đình trệ trong khâu sản xuất.",s=>{const n=kill(s,SEC[s.sec].salt*(s.coop?.5:1));return n?"Mất "+n+" ô đang canh tác (mất cả c và v đã ứng).":"May mắn, không ô nào bị hại."}],
+["c","🦠","Dịch bệnh lan nhanh","Dịch bệnh bùng phát trong vùng sản xuất.","Rủi ro làm đứt vòng tuần hoàn: tư bản ứng ra không quay về thành tiền.",s=>{const n=kill(s,SEC[s.sec].dis*(s.coop?.5:1));return n?"Mất "+n+" ô đang canh tác.":"May mắn, không ô nào bị hại."}],
+["c","📋","Rào cản kỹ thuật, truy xuất nguồn gốc","Thị trường nhập khẩu siết tiêu chuẩn xanh.","Cạnh tranh quốc tế buộc phải đổi mới; doanh nghiệp không đạt chuẩn bị loại khỏi thị trường.",s=>s.cert?"Đã đạt chuẩn: không bị ảnh hưởng.":(s.pm*=.7,"Chưa đạt chuẩn: giá bán ×0,7.")],
+["c","📦","Hàng nhập khẩu giá rẻ tràn vào","Hàng ngoại cạnh tranh trực tiếp trên thị trường nội địa.","Quy luật cạnh tranh: chi phí cao hơn mức hao phí xã hội cần thiết thì thua.",s=>s.tech>=2?(s.pm*=.95,"Máy móc tốt, chi phí thấp: giá ×0,95."):(s.pm*=s.coop?.92:.85,"Giá bán ×"+(s.coop?"0,92":"0,85")+".")],
+["c","⛽","Giá vật tư tăng mạnh","Phân bón, thức ăn, xăng dầu đồng loạt tăng.","Tư bản bất biến (c) tăng làm thu hẹp giá trị thặng dư.",s=>(s.cm=1.3,"Chi phí c khi gieo trồng quý này ×1,3.")],
+["c","📉","Giá nông sản rớt","Được mùa mất giá, thương lái ép giá.","Quy luật giá trị và cung cầu: đơn lẻ thì yếu thế khi thương lượng.",s=>(s.pm*=s.coop?.88:.75,"Giá bán ×"+(s.coop?"0,88":"0,75")+".")],
+["c","🌀","Bão lũ bất thường","Mưa bão gây ngập nhiều khu vực.","Thiên tai phá hủy tư liệu sản xuất đã ứng ra.",s=>{const n=kill(s,.25);s.cash-=30;return "Mất "+n+" ô và 30 triệu sửa chữa."}],
+["n","☀️","Một quý bình lặng","Không có biến động lớn.","Tái sản xuất diễn ra bình thường, hãy tập trung tích lũy.",s=>"Không thay đổi."]];
+const RULES=`<div class="rules"><h3>Một quý gồm 3 bước</h3><ul><li><b>Gieo:</b> bấm ô trống, ứng c + v (T–H).</li><li><b>Sản xuất:</b> cây lớn sau 2–3 quý (H…SX…H').</li><li><b>Thu hoạch:</b> bấm ô chín để thu doanh thu (H'–T'). Chín quá 1 quý bị hao hụt 25% mỗi quý.</li></ul>
+<h3>Công thức</h3><ul><li>c = c₀ × (1 + 10% × cấp máy) × hệ số vật tư</li><li>v = v₀ × (1 − 15% × cấp máy) × (1 + 10% × cấp lương)</li><li>Doanh thu = R₀ × (1 + 14% máy) × (1 + 6% lương) × (1,05 nếu có HTX) × giá quý × hao hụt × (0,75 nếu tinh thần &lt; 30)</li><li>m = doanh thu − c − v; m' = m/v</li></ul>
+<h3>Tinh thần công nhân</h3><ul><li>Mỗi quý: −6 nếu chưa tăng lương, 0 ở cấp 1, +3 ở cấp 2, +6 ở cấp 3.</li><li>Dưới 30: năng suất −25%. Về 0: công nhân bỏ việc, bạn thua.</li></ul>
+<h3>Thẻ sự kiện (cuối mỗi quý)</h3><ul><li>Cơ hội: EVFTA, RCEP, vốn hỗ trợ, bao tiêu, chuyển đổi số. Có chứng nhận hoặc hợp tác xã thì hưởng nhiều hơn.</li><li>Thách thức: mặn, dịch bệnh, rào cản kỹ thuật, hàng giá rẻ, vật tư tăng, rớt giá, bão lũ.</li></ul>
+<h3>Loại tái sản xuất mỗi quý</h3><ul><li>Tổng tư bản tăng &gt; 5%: mở rộng. Trong ±5%: giản đơn. Giảm &gt; 5%: thu hẹp.</li></ul>
+<h3>Thắng, thua</h3><ul><li><b>Thắng ★:</b> sau 12 quý, tư bản ≥ 1.500 triệu + có chứng nhận + tinh thần ≥ 40. ★★ nếu ≥ 2.200, ★★★ nếu ≥ 3.000.</li><li><b>Thua:</b> tinh thần = 0; hoặc hết vốn mà không còn ô nào để gieo; hoặc tư bản cuối &lt; 500.</li></ul></div>`;
+let S;
+const K=()=>S.cash+S.fixed+S.plots.reduce((a,p)=>a+(p.s?p.cc+p.vv:0),0);
+const cost=()=>{const d=SEC[S.sec];return{c:Math.round(d.c*S.cm*(1+.1*S.tech)),v:Math.round(d.v*(1-.15*S.tech)*(1+.1*S.skill))}};
+const rev=p=>{const d=SEC[S.sec];return Math.round(d.r*(1+.14*S.tech)*(1+.06*S.skill)*(S.coop?1.05:1)*S.pm*(S.morale<30?.75:1)*Math.max(.25,1-.25*p.w))};
+const f=n=>Math.round(n).toLocaleString("vi-VN");
+const sg=n=>(n>0?"+":n<0?"−":"")+f(Math.abs(n));
+const LG=(t,a,c)=>{const l=S.lg[S.lg.length-1];if(l&&l.q==S.q&&l.t==t&&l.c==c){l.a+=a;l.n++}else S.lg.push({q:S.q,t,a,c,n:1})};
+const CI={rev:"🧺",cv:"🌱",inv:"🏗️",ev:"🎴"},GS={rice:["🌱","🌿"],fish:["🥚","🐠"],fruit:["🌱","🌳"]};
+const ledger=q=>{const a=S.lg.filter(x=>x.q==q);return a.length?`<table>${a.map(x=>`<tr><td>${CI[x.c]} ${x.t}${x.n>1?" ×"+x.n:""}</td><td class="${x.a<0?"ng":"ps"}">${sg(x.a)}</td></tr>`).join("")}<tr><td><b>Cộng quý ${q}</b></td><td>${sg(a.reduce((s,x)=>s+x.a,0))}</td></tr></table>`:`<p class="lg">Chưa có giao dịch nào ở quý ${q}.</p>`};
+function wf(t,b,st){let v=b;const a=[["Gốc",b,0]];st.forEach(s=>{const n=v*s[1];a.push([s[0],n,n-v]);v=n});const mx=Math.max(...a.map(x=>x[1]));
+return `<div class="wf"><b>${t}: ${Math.round(v)}</b>${a.map(x=>`<div class="wr"><span>${x[0]}</span><div><i class="${x[2]<-.5?"dn":x[2]>.5?"up":""}" style="width:${x[1]/mx*100}%"></i></div><em class="${x[2]<-.5?"ng":x[2]>.5?"ps":""}">${x[2]?sg(Math.round(x[2])):x[0]=="Gốc"?Math.round(x[1]):"giữ nguyên"}</em></div>`).join("")}</div>`}
+const dl=n=>n?`<span class="dl ${n>0?"up":"dn"}">${n>0?"▲":"▼"}${f(Math.abs(n))}</span>`:"";
+function hudx(){const k=K(),q=Math.min(S.q,12),P=S.pv,fc=["😠","😟","🙂","😀"][S.morale<20?0:S.morale<40?1:S.morale<70?2:3],
+C=(y,l,v,x,b)=>`<button class="chip" onclick="why('${y}')"><small>${l} ⓘ</small><b>${v}</b>${x||""}${b||""}</button>`;
+$("hud").innerHTML=C("time","Thời gian","Năm "+Math.ceil(q/4)+", quý "+((q-1)%4+1))+C("cash","Tiền mặt",f(S.cash)+" tr",dl(S.cash-P.cash))+C("k","Tổng tư bản",f(k)+" tr",dl(k-P.k),`<div class="bar"><i style="width:${Math.min(100,k/15)}%"></i></div>`)+C("mo","Tinh thần "+fc,S.morale,dl(S.morale-P.m),`<div class="bar"><i style="width:${S.morale}%;background:${S.morale<30?"var(--bad)":"var(--ac)"}"></i></div>`)+C("price","Giá bán quý này","×"+S.pm.toFixed(2))}
+function scene(){const q=Math.min(S.q,12),i=(q-1)%4,sk=[["#ffd9e8","#fff3d6"],["#7cc8f5","#d6f0ff"],["#ffcf91","#ffe9c7"],["#8a9bb0","#c5cfda"]][i],bad=S.card&&S.card.t=="c",e=$("scene");
+e.style.background=`linear-gradient(${sk[0]},${sk[1]} 62%,#3f9aa8 62%)`;
+e.innerHTML=`<div class="pill">${SEC[S.sec].e} ${SEC[S.sec].n} · Năm ${Math.ceil(q/4)}, quý ${i+1} · ${["Xuân","Hè","Thu","Mùa mưa"][i]}</div><span class="sun">${i==3||bad?"⛈️":"☀️"}</span><span class="cl" style="top:14px;animation-delay:-8s">☁️</span><span class="cl" style="top:40px;animation-delay:-24s">☁️</span><div class="bld">🌴🏠${"⚙️".repeat(S.tech)}${S.tech>1?"🚜":""}${S.cert?"🏅":""}${S.coop?"🤝":""}${"🎓".repeat(S.skill)}🌴</div><div class="wk">${"👷".repeat(Math.min(5,S.plots.filter(p=>p.s).length))} ${["😠","😟","🙂","😀"][S.morale<20?0:S.morale<40?1:S.morale<70?2:3]}</div><span class="bt">🛶</span>`}
+function rep(pv,q){const g=c=>S.lg.filter(x=>x.q==q&&x.c==c).reduce((a,x)=>a+x.a,0),k=K(),rows=[["Doanh thu thu hoạch",g("rev")],["Ứng c + v để gieo",g("cv")],["Đầu tư, mở rộng",g("inv")],["Thẻ sự kiện (tiền mặt)",g("ev")]];
+return `<table class="rp">${rows.map(r=>`<tr><td>${r[0]}</td><td class="${r[1]<0?"ng":r[1]>0?"ps":""}">${sg(r[1])}</td></tr>`).join("")}<tr><td><b>Tiền mặt</b></td><td>${f(pv.cash)} → ${f(S.cash)}</td></tr><tr><td><b>Tổng tư bản</b></td><td>${f(pv.k)} → ${f(k)} (${sg(k-pv.k)})</td></tr><tr><td><b>Tinh thần</b></td><td>${pv.m} → ${S.morale} (${S.md>0?"+":""}${S.md}, do ${S.skill?"lương và đào tạo cấp "+S.skill:"chưa tăng lương"})</td></tr></table>`}
+function expl(){const{c,v}=cost(),d=SEC[S.sec],rv=rev({w:0}),m=rv-c-v,q=Math.min(S.q,12);
+return `<p class="lg">Thanh xanh là yếu tố làm con số tăng, thanh đỏ là yếu tố làm giảm.</p>`+wf("Doanh thu mỗi ô",d.r,[["Máy móc",1+.14*S.tech],["Lương, đào tạo",1+.06*S.skill],["Hợp tác xã",S.coop?1.05:1],["Giá quý này",S.pm],["Tinh thần thấp",S.morale<30?.75:1]])+wf("Chi phí c mỗi ô",d.c,[["Máy móc",1+.1*S.tech],["Giá vật tư",S.cm]])+wf("Chi phí v mỗi ô",d.v,[["Máy móc",1-.15*S.tech],["Lương, đào tạo",1+.1*S.skill]])+`<table><tr><td>Lãi m mỗi ô = ${rv} − ${c} − ${v}</td><td class="${m<0?"ng":"ps"}">${sg(m)}</td></tr><tr><td>Tỷ suất m' = m/v</td><td>${Math.round(m/v*100)}%</td></tr></table><h2 style="margin-top:12px">Sổ biến động tiền mặt</h2>`+ledger(q)+(q>1?ledger(q-1):"")}
+function why(k){let t,b;const kk=K(),inP=S.plots.reduce((a,p)=>a+(p.s?p.cc+p.vv:0),0);
+if(k=="cash"){t="Vì sao tiền mặt biến động?";b=ledger(S.q)+`<p class="lg">Tiền mặt tăng khi thu hoạch, giảm khi ứng c + v, đầu tư, mở ô hoặc gặp thẻ xấu. Mũi tên là chênh lệch so với đầu quý.</p>`}
+else if(k=="k"){t="Tổng tư bản gồm những gì?";b=`<table><tr><td>Tiền mặt</td><td>${f(S.cash)}</td></tr><tr><td>Tài sản đầu tư (máy, chứng nhận, đất)</td><td>${f(S.fixed)}</td></tr><tr><td>Vốn đang nằm trong ô sản xuất (c + v đã ứng)</td><td>${f(inP)}</td></tr><tr><td><b>Tổng</b></td><td>${f(kk)}</td></tr></table><p class="lg">Gieo trồng và đầu tư chỉ đổi dạng vốn nên tổng không đổi. Tổng tăng nhờ giá trị thặng dư m khi thu hoạch, và giảm khi mất mùa, hao hụt hoặc gặp thẻ xấu.</p>`}
+else if(k=="mo"){t="Vì sao tinh thần là "+S.morale+"?";b=`<table><tr><td>Mức lương, đào tạo hiện tại</td><td>Cấp ${S.skill}/3</td></tr><tr><td>Thay đổi mỗi quý</td><td class="${S.skill?"ps":"ng"}">${sg([-6,0,3,6][S.skill])}</td></tr><tr><td>Năng suất bị phạt −25% (dưới 30)</td><td>${S.morale<30?"Đang bị":"Chưa"}</td></tr><tr><td>Bỏ việc (về 0)</td><td>Còn ${S.skill?"an toàn":Math.ceil(S.morale/6)+" quý"}</td></tr></table><p class="lg">Muốn tinh thần tăng, hãy đầu tư tăng lương và đào tạo.</p>`}
+else if(k=="price"){t="Giá bán quý này ×"+S.pm.toFixed(2);b=(S.card?`<p>Do thẻ: <b>${S.card.i} ${S.card.n}</b><br>${S.card.r}</p>`:"<p>Chưa có thẻ nào, giá chuẩn ×1,00.</p>")+`<p class="lg">Giá chỉ áp dụng cho các lần thu hoạch trong quý này, rồi trở về ×1,00 khi kết thúc quý. Xem tab "Vì sao?" để biết giá tác động doanh thu ra sao.</p>`}
+else{t="Thời gian";b=`<p>Trò chơi có 12 quý (3 năm). Mỗi lần kết thúc quý: cây lớn thêm 1 quý, tinh thần thay đổi, bốc một thẻ sự kiện và giá trở về ×1,00.</p>`}
+$("ov").innerHTML=`<div class="ov" onclick="if(event.target==this)$('ov').innerHTML=''"><div class="card"><h2>${t}</h2>${b}<button class="b go" onclick="$('ov').innerHTML=''">Đóng</button></div></div>`}
+function pop(el,t,c){const r=el.getBoundingClientRect(),s=document.createElement("span");s.className="fl "+(c||"");s.textContent=t;s.style.left=r.left+r.width/2+"px";s.style.top=r.top+"px";document.body.appendChild(s);setTimeout(()=>s.remove(),1100)}
+function start(k){S={sec:k,q:1,cash:500,fixed:0,tech:0,skill:0,cert:0,coop:0,morale:60,pm:1,cm:1,disc:1,tc:0,tv:0,tm:0,card:null,prevK:500,rp:"",msg:"",over:null,tab:"inv",nw:-1,h:[500],lg:[],md:0,pv:{cash:500,k:500,m:60},plots:Array.from({length:9},(_,i)=>({u:i<4,s:0,t:0,cc:0,vv:0,w:0}))};$("ov").innerHTML="";R()}
+function plant(p){const{c,v}=cost();if(S.cash<c+v)return 0;S.cash-=c+v;LG("Gieo: c "+c+" + v "+v+" mỗi ô",-(c+v),"cv");Object.assign(p,{s:1,t:SEC[S.sec].g,cc:c,vv:v,w:0});return 1}
+function harv(p){const r=rev(p);LG("Thu hoạch"+(p.w?" (hao hụt "+p.w*25+"%)":""),r,"rev");S.cash+=r;S.tc+=p.cc;S.tv+=p.vv;S.tm+=r-p.cc-p.vv;p.s=0;return r}
+function plot(i,el){if(S.over)return;const p=S.plots[i],{c,v}=cost();S.msg="";S.nw=-1;
+if(!p.u){if(S.cash<100)S.msg="Cần 100 triệu để mở ô đất.";else{S.cash-=100;S.fixed+=100;p.u=1;LG("Mở thêm ô đất",-100,"inv");pop(el,"−100","bad")}}
+else if(p.s==0){if(plant(p)){S.nw=i;pop(el,"−"+(c+v),"bad")}else S.msg="Không đủ vốn: cần c + v = "+(c+v)+" triệu."}
+else if(p.s==2)pop(el,"+"+harv(p));
+R()}
+function all(k,el){if(S.over)return;let n=0,t=0;S.msg="";S.plots.forEach(p=>{if(k=="p"&&p.u&&p.s==0&&plant(p))n++;if(k=="h"&&p.s==2){t+=harv(p);n++}});if(!n)S.msg=k=="p"?"Không có ô trống hoặc không đủ vốn.":"Chưa có ô nào chín.";else pop(el,(k=="p"?"Gieo "+n+" ô":"+"+t),k=="p"?"bad":"");R()}
+function inv(k,el){if(S.over)return;const L=S[k],I=INV[k];if(L>=I.p.length)return;const b=Math.round(I.p[L]*S.disc);
+if(S.cash<b){S.msg="Không đủ vốn: cần "+b+" triệu.";R();return}
+S.cash-=b;S.fixed+=b;S.disc=1;S[k]++;LG("Đầu tư: "+I.n,-b,"inv");S.msg="";pop(el,"−"+b,"bad");R()}
+function tab(x){S.tab=x;R()}
+function endQ(){if(S.over)return;const pv=S.pv,e0=S.cash;
+S.plots.forEach(p=>{if(p.s==2)p.w++;else if(p.s==1&&--p.t<=0){p.s=2;p.w=0}});
+S.md=[-6,0,3,6][S.skill];S.morale=Math.max(0,Math.min(100,S.morale+S.md));S.pm=1;S.cm=1;S.msg="";S.nw=-1;
+const e=EV[Math.floor(Math.random()*EV.length)];
+S.card={t:e[0],i:e[1],n:e[2],d:e[3],m:e[4],r:e[5](S)};if(S.cash!=e0)LG("Thẻ: "+e[2],S.cash-e0,"ev");
+const k=K(),g=(k-S.prevK)/S.prevK;
+S.rp=g>.05?"Tái sản xuất mở rộng":g>=-.05?"Tái sản xuất giản đơn":"Tái sản xuất thu hẹp";S.prevK=k;S.h.push(k);S.q++;
+const{c,v}=cost();
+if(S.morale<=0)S.over="lm";else if(!S.plots.some(p=>p.s)&&S.cash<c+v)S.over="lc";
+else if(S.q>12)S.over=(k>=1500&&S.cert&&S.morale>=40)?"win":k>=500?"ok":"lk";
+const qq=S.q-1;S.pv={cash:S.cash,k:K(),m:S.morale};R();const c0=S.card;
+$("ov").innerHTML=`<div class="ov"><div class="card evc ${c0.t}"><div class="big">${c0.i}</div><p style="text-align:center;margin:0;color:var(--mu)">${c0.t=="o"?"Cơ hội":c0.t=="c"?"Thách thức":"Bình thường"}</p><h2>${c0.n}</h2><p>${c0.d}</p><div class="r">${c0.r}</div><em>Góc lý luận: ${c0.m}</em><b>Tổng kết quý ${qq}</b>${rep(pv,qq)}<button class="b go" style="margin-top:10px" onclick="closeEv()">Tiếp tục</button></div></div>`}
+function closeEv(){$("ov").innerHTML="";if(S.over)end()}
+function R(){const d=SEC[S.sec],{c,v}=cost(),k=K(),q=Math.min(S.q,12);
+$("trk").innerHTML=Array.from({length:12},(_,i)=>`<i class="${i+1<q?"d":i+1==q?"c":""}"></i>`).join("");
+$("hud").innerHTML=`<div class="chip"><small>Thời gian</small><b>Năm ${Math.ceil(q/4)}, quý ${(q-1)%4+1}</b></div><div class="chip"><small>Tiền mặt</small><b>${f(S.cash)} tr</b></div><div class="chip"><small>Tổng tư bản (mục tiêu 1.500)</small><b>${f(k)} tr</b><div class="bar"><i style="width:${Math.min(100,k/15)}%"></i></div></div><div class="chip"><small>Tinh thần công nhân</small><b>${S.morale}</b><div class="bar"><i style="width:${S.morale}%;background:${S.morale<30?"var(--bad)":"var(--ac)"}"></i></div></div><div class="chip"><small>Giá bán quý này</small><b>×${S.pm.toFixed(2)}</b></div>`;
+hudx();scene();$("goal").innerHTML=[["Tư bản ≥ 1.500",k>=1500],["Có chứng nhận quốc tế",S.cert],["Tinh thần ≥ 40",S.morale>=40]].map(x=>`<span class="tag ${x[1]?"ok":""}">${x[1]?"✓":"○"} ${x[0]}</span>`).join("");
+const rd=S.plots.filter(p=>p.s==2).length,em=S.plots.filter(p=>p.u&&!p.s).length;
+$("hint").textContent=S.morale<40&&!S.skill?"⚠️ Công nhân sắp bỏ việc: hãy đầu tư tăng lương và đào tạo.":rd?`🌾 Có ${rd} ô đã chín: bấm để thu hoạch (để lâu bị hao hụt).`:em&&S.cash>=c+v?"🟫 Bấm ô đất trống để gieo trồng.":!S.cert&&S.q>=3?"📋 Hãy cân nhắc lấy chứng nhận quốc tế để hưởng EVFTA, RCEP.":"⏭️ Bấm \"Kết thúc quý\" để bốc thẻ sự kiện.";
+const grid=S.plots.map((p,i)=>{const a=`onclick="plot(${i},this)"`;return !p.u?`<button class="pl lk" ${a}>🔒<small>Mở ô: 100</small></button>`:p.s==0?`<button class="pl" ${a}><span class="e">➕</span><small>Gieo −${c+v}</small></button>`:p.s==1?`<div class="pl gr ${S.nw==i?"nw":""}"><span class="e">${GS[S.sec][p.t==SEC[S.sec].g?0:1]}</span><small>còn ${p.t} quý</small><div class="pg"><i style="width:${(SEC[S.sec].g-p.t)/SEC[S.sec].g*100}%"></i></div></div>`:`<button class="pl rd" ${a}><span class="e">${d.e}</span><small>Thu +${rev(p)} · lãi ${rev(p)-p.cc-p.vv}${p.w?" ⚠️":""}</small></button>`}).join("");
+$("L").innerHTML=`<div class="card farm"><h2>${d.e} Trang trại của bạn: ${d.n}</h2><div class="grid ${S.sec}">${grid}</div><div class="msg">${S.msg}</div><div class="row"><button class="b half" onclick="all('p',this)">🌱 Gieo tất cả</button><button class="b half" onclick="all('h',this)">🧺 Thu hoạch tất cả</button></div><button class="b go" style="margin-top:8px" onclick="endQ()">⏭️ Kết thúc quý, bốc thẻ sự kiện</button></div>`;
+const T=(x,n)=>`<button class="tb ${S.tab==x?"on":""}" onclick="tab('${x}')">${n}</button>`;
+const last=S.card?`<div class="mini ${S.card.t}"><b>${S.card.i} ${S.card.n}</b><br>${S.card.r}</div>`:`<div class="mini">Chưa bốc thẻ nào. Mỗi cuối quý bạn sẽ bốc một thẻ.</div>`;
+let B="";
+if(S.tab=="inv")B=(S.disc<1?`<p><b>🎉 Khoản đầu tư kế tiếp được giảm 50%.</b></p>`:"")+Object.keys(INV).map(x=>{const I=INV[x],L=S[x],mx=L>=I.p.length,b=mx?0:Math.round(I.p[L]*S.disc);return `<button class="b" ${mx?"disabled":""} onclick="inv('${x}',this)"><span>${I.i} ${I.n}${I.p.length>1?" (cấp "+L+"/"+I.p.length+")":""}<small>${I.d}</small></span><b>${mx?"✓":b}</b></button>`}).join("");
+else if(S.tab=="mac"){const tt=S.tc+S.tv+Math.max(0,S.tm)||1,mp=S.tv?Math.round(S.tm/S.tv*100)+"%":"–",mx=Math.max(1800,...S.h),pts=S.h.map((y,i)=>(i*(280/12)).toFixed(0)+","+(80-y/mx*76).toFixed(0)).join(" ");
+B=`<div class="stk"><i style="width:${S.tc/tt*100}%;background:#5a7bd8"></i><i style="width:${S.tv/tt*100}%;background:var(--gd)"></i><i style="width:${Math.max(0,S.tm)/tt*100}%;background:var(--good)"></i></div><div class="lg">Xanh dương: c, vàng: v, xanh lá: m (trên phần đã thu hoạch)</div><table><tr><td>Mỗi ô: c / v</td><td>${c} / ${v}</td></tr><tr><td>Đã thu hồi: c / v</td><td>${f(S.tc)} / ${f(S.tv)}</td></tr><tr><td>Giá trị thặng dư m</td><td>${f(S.tm)}</td></tr><tr><td>Tỷ suất m' = m/v</td><td>${mp}</td></tr><tr><td>Cấu tạo hữu cơ c/v</td><td>${(c/v).toFixed(2)}</td></tr><tr><td>Quý vừa rồi</td><td>${S.rp||"–"}</td></tr></table><p class="lg" style="margin-top:10px">Đường tổng tư bản qua các quý (nét đứt: mục tiêu 1.500)</p><svg viewBox="0 0 280 84" width="100%"><line x1="0" x2="280" y1="${80-1500/mx*76}" y2="${80-1500/mx*76}" stroke="var(--gd)" stroke-dasharray="4"/><polyline fill="none" stroke="var(--ac)" stroke-width="3" points="${pts}"/></svg>`}
+else if(S.tab=="ex")B=expl();else B=RULES;
+$("Rr").innerHTML=last+`<div class="card"><div class="tabs">${T("inv","Đầu tư")}${T("ex","Vì sao?")}${T("mac","Chỉ số Mác")}${T("rl","Luật")}</div>${B}</div>`;
+if(S.over&&!$("ov").innerHTML)end()}
+function end(){const o=S.over,k=K(),st=o=="win"?(k>=3000?3:k>=2200?2:1):0,
+T={win:["Chiến thắng: tái sản xuất mở rộng bền vững","Bạn tích lũy đủ vốn, đạt chuẩn quốc tế và giữ được người lao động."],ok:["Tồn tại, chưa bứt phá","Bạn giữ được doanh nghiệp (tái sản xuất giản đơn) nhưng chưa đủ điều kiện thắng: tư bản ≥ 1.500, có chứng nhận, tinh thần ≥ 40."],lm:["Thua: công nhân bỏ việc","Tinh thần về 0. Chỉ ép lao động mà không đầu tư lương và đào tạo thì sản xuất đình trệ."],lc:["Thua: hết vốn","Không còn vốn ứng cho vòng sản xuất mới, tuần hoàn tư bản bị đứt."],lk:["Thua: vốn thu hẹp","Tổng tư bản cuối kỳ dưới mức ban đầu (tái sản xuất thu hẹp)."]}[o];
+$("ov").innerHTML=`<div class="ov"><div class="card"><div class="big">${o=="win"?"🏆":o=="ok"?"🌾":"💔"}</div><h2 style="text-align:center">${T[0]}</h2><p style="text-align:center;font-size:24px;margin:0">${"★".repeat(st)}</p><p>${T[1]}</p><table><tr><td>Tổng tư bản cuối</td><td>${f(k)} triệu (đầu: 500)</td></tr><tr><td>Giá trị thặng dư m</td><td>${f(S.tm)}</td></tr><tr><td>Tỷ suất m'</td><td>${S.tv?Math.round(S.tm/S.tv*100)+"%":"–"}</td></tr><tr><td>Chứng nhận / Hợp tác xã</td><td>${S.cert?"Có":"Chưa"} / ${S.coop?"Có":"Chưa"}</td></tr></table><p>Kết luận: muốn tái sản xuất mở rộng, doanh nghiệp phải tích lũy, đổi mới kỹ thuật, nâng chất lượng lao động và đạt chuẩn để tận dụng EVFTA, RCEP. Điều đó phù hợp với lý luận của Mác về tích lũy tư bản.</p><button class="b go" onclick="menu()">Chơi lại</button></div></div>`}
+function menu(){S=null;$("scene").innerHTML="";$("trk").innerHTML="";$("hud").innerHTML="";$("goal").innerHTML="";$("hint").textContent="Chọn một lĩnh vực để bắt đầu.";$("L").innerHTML="";$("Rr").innerHTML="";
+$("ov").innerHTML=`<div class="ov"><div class="card"><h2>Bạn là chủ một doanh nghiệp nhỏ ở Đồng bằng sông Cửu Long</h2><p>Có 500 triệu vốn và 12 quý. Gieo trồng, thu hoạch, đầu tư và đối phó với thẻ sự kiện EVFTA, RCEP, thiên tai. Mục tiêu: tư bản ≥ 1.500 triệu, có chứng nhận quốc tế, công nhân còn gắn bó.</p><div class="sc">${Object.keys(SEC).map(k=>{const s=SEC[k];return `<button class="b" onclick="start('${k}')"><span>${s.e} <b>${s.n}</b><small>${s.d}</small><small>Chi phí/ô: c ${s.c} + v ${s.v} · Doanh thu/ô: ${s.r} · Chu kỳ: ${s.g} quý</small></span></button>`}).join("")}</div></div></div>`}
+menu();
+</script></body></html>
